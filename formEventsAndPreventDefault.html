@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form events & preventDefault</title>
+  </head>
+  <body>
+    <h1>Form events & preventDefault</h1>
+
+    <form action="/dsdsds">
+      <input type="text" />
+      <button>Submit</button>
+    </form>
+
+    <p>
+      When we have a form and the user submits it, the action we give the form
+      element is where the form data will be returned to, or sent to by the
+      user. Also, the website will change to that address by DEFAULT.
+    </p>
+    <img src="formHTML.png" alt="" />
+    <p>If we wanted to stay on the same webpage, we would use preventDefault</p>
+    <h2>preventDefault()</h2>
+    <p>
+      We start by creating an event listener to the form when it is submitted.
+    </p>
+    <img src="eventListenerFormCode.png" alt="" />
+    <p>
+      Now we can use preventDefault() to change the default behavior of the
+      form, which is to change the website to the form action.
+    </p>
+    <p>
+      To do this, we add preventDefault after the parameter name inside our
+      function. This parameter is the auto-generated event object which we can
+      name in any way when creating the function.
+    </p>
+    <img src="preventDefaultFormCode.png" alt="" />
+    <p>Now, we will stay on the website even after submitting.</p>
+    <h2>Example</h2>
+    <p>
+      Here we have an input for internet surfers, they can leave a comment by
+      submitting the form.
+    </p>
+    <p>
+      The comment will appear on the website, we will retrieve the form data and
+      post it directly on the same page, without even having to refresh.
+    </p>
+    <img src="exampleCommentFormHTML.png" alt="" />
+    <img src="exampleCommentFormJS.png" alt="" />
+    <hr />
+
+    <h2>(POST)</h2>
+    <h3>The world is ending! Scientists confirm...</h3>
+
+    <form id="commentForm" action="assasas">
+      <input placeholder="Leave a comment!" id="commentInput" type="text" />
+      <button>Post comment.</button>
+    </form>
+    <ul id="commentsUL"></ul>
+
+    <hr />
+    <h2>Example</h2>
+    <p>
+      And here is another example for a form which prints out the number and the
+      item in a single list item, the webpage does not change either.
+    </p>
+    <img src="exampleFormGroceryListHTML.png" alt="" />
+    <img src="exampleFormGroceryListJS.png" alt="" />
+    <hr />
+    <h1>Grocery List</h1>
+    <form id="form2" action="/nowhere">
+      <label for="item">Enter A Product</label>
+      <input type="text" id="product" name="product" />
+      <label for="item">Enter A Quantity</label>
+      <input type="number" id="qty" name="qty" />
+      <button>Submit</button>
+    </form>
+
+    <ul id="list"></ul>
+    <hr />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
+      voluptatem incidunt cumque dolores explicabo voluptatum officia, fuga
+      libero, cum minus sint aliquid vero nihil expedita delectus earum facilis
+      quibusdam quod. Quis facere placeat consequuntur quibusdam provident
+      accusamus ab nostrum. Praesentium sapiente beatae animi voluptas, quam
+      facilis repellendus illo dolorem, id, ipsa ullam tenetur! Deleniti debitis
+      aliquid nemo sit omnis fugiat. Dignissimos esse eos temporibus a debitis
+      nihil. Laudantium, a nisi? Reiciendis doloribus deserunt nam provident
+      esse, repudiandae id? A sint voluptas exercitationem error quis reiciendis
+      placeat quibusdam quo dolor voluptatem! Dignissimos odit commodi, autem
+      voluptatem nam consequuntur voluptate, delectus illum fugiat, reiciendis
+      voluptas nesciunt ab laboriosam corrupti perferendis veritatis quia maxime
+      eos repudiandae hic quo? Reprehenderit placeat quibusdam amet quo. Dolore
+      enim ad vel animi ipsa fuga voluptas dicta nobis inventore veritatis.
+      Obcaecati tempore quas cum totam eius corporis, recusandae molestias amet
+      nulla odit, dolore fuga eaque autem. Repellat, ab. Sint perspiciatis,
+      dolorem provident dicta expedita temporibus quo vitae nemo accusantium
+      maiores commodi modi repellendus adipisci? Saepe, laboriosam quaerat,
+      iusto ex numquam cupiditate reiciendis laudantium culpa vel at debitis
+      asperiores! Exercitationem eum libero numquam! Similique pariatur, totam
+      ipsam sint velit ex at mollitia voluptatibus atque commodi illum, eligendi
+      facere iure consequuntur autem modi deserunt ut, quia tempore hic rem.
+      Fugit. Cumque quas quos harum corrupti aut, adipisci non tempore quam
+      exercitationem perspiciatis commodi molestiae, culpa autem in corporis.
+      Soluta culpa id similique maxime consectetur asperiores eveniet nulla
+      assumenda fuga quas. Iusto enim perferendis, explicabo exercitationem
+      rerum id recusandae ex cumque. Minima fugiat soluta, cum quis molestiae,
+      esse porro iure in aperiam ut odit! Eius, ullam placeat illo totam qui
+      sapiente. Molestias aliquid atque sequi, deserunt dignissimos possimus
+      necessitatibus. Recusandae, omnis impedit natus quam animi, suscipit
+      ipsum, placeat quae dicta aut dolor repellat quidem! Qui cum dicta
+      consequatur adipisci ut repudiandae.
+    </p>
+    <script src="formEventsAndPreventDefault.js"></script>
+  </body>
+</html>

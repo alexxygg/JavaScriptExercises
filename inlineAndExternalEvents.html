@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline and External Events</title>
+  </head>
+  <body>
+    <h1>Inline and External Events</h1>
+    <h2>Inline Events</h2>
+    <p>
+      We can have code run at specific events, like when the user clicks on a
+      button:
+    </p>
+    <img src="onClick.png" alt="" />
+    <p>(IN HTML)</p>
+    <p>We need to pay attention to the quotes we use with inline events.</p>
+    <button onclick="alert('Hi')">Click Me!</button>
+    <p>
+      One downside with this method od events is that we need to type the same
+      code every time we want that event to happen.
+    </p>
+    <p>
+      Also, to have multiple events for the same action, we need to separate the
+      events with a semicolon.
+    </p>
+    <img src="dblclick.png" alt="" />
+    <button
+      ondblclick="alert('Why did you double-click me?');alert('Don´t do it again!')"
+    >
+      Double-click Me!
+    </button>
+    <h2>External Events</h2>
+    <p>
+      We can also link our JS document to our HTML and create our events there.
+      We normally use functions, which can be saved and used, or just created as
+      function expressions. We must declare a variable to associate the event to
+      our button.
+    </p>
+    <img src="externalEventsonclickHTML.png" alt="" />
+    <p>Here we use a function expression:</p>
+    <img src="externalEventsonclickJS.png" alt="" />
+    <p></p>
+    <button id="btn1">Another button</button>
+    <hr />
+    <p>Here we declare a function, and save it to an event for our button:</p>
+    <img src="onmouseenter.png" alt="" />
+    <p>(It has a class of btn2 on our HTML)</p>
+    <button class="btn2">Please don't hover me!</button>
+    <script src="inlineAndExternalEvents.js"></script>
+  </body>
+</html>

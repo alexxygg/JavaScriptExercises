@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <h1>Variables</h1>
+    <p>They help us resuse our code.</p>
+    <p>
+      It is like giving your value a label, we store a name for it to come back
+      to it when needed.
+    </p>
+    <p>let someName = value;</p>
+    <p>let year = 1985;</p>
+    <p>let myLuckyNumber = 37;</p>
+    <p>let octopusLimbs = 8;</p>
+    <h2>Retrieving varlues</h2>
+    <p>let numShoePairs = 20</p>
+    <p>let numSocks = 50</p>
+    <p>let feetThings = numShoePairs + numSocks</p>
+    <p>
+      If we multiple numShoePairs by 5, the result would be 100. But if we check
+      the value of numShoePairs afterwards, the value would still be 20.
+    </p>
+    <p>
+      Here we can play with changing the values of any of the variables we made,
+      but the result would not be updated. numSocks + 5 would result in 55, but
+      checking numSocks after would only show 50.
+    </p>
+
+    <h2>Updating variable values</h2>
+    <p>We can change numShoePairs to 40 in various ways.</p>
+    <p>We can declare numShoePairs = 40;</p>
+    <p>We can declare numShoePairs = numShoePairs + 20;</p>
+    <p>
+      Checking the value of numShoePairs after doing one of the above would give
+      us 40 now!
+    </p>
+    <h3>
+      Checking the value of feetThings would not give us an updated value of
+      numShoePairs + numSocks, it would return the value we stored at the time
+      it was declared only. So although numShoePairs is 40 now, and numSocks is
+      50, we would not get 90 back, we would get 70. The value would not update
+      unless done manually. We can simply declare the variable again: let
+      feetThings = numShoePairs + numSocks; and now feetThings would result in
+      90!
+    </h3>
+    <h2>Shorthands for updating a value.</h2>
+    <p>
+      We can also increment, reduce, multiple and divide with the shorthands:
+    </p>
+    <h3>variable += 1;</h3>
+    <p>let numLives = 9;</p>
+    <p>numLives += 5</p>
+    <p>Now numLives has a value of 14!</p>
+
+    <p>let numLives = 9;</p>
+    <p>numLives -= 5</p>
+    <p>Now numLives has a value of 4!</p>
+
+    <p>let numLives = 9;</p>
+    <p>numLives *= 5</p>
+    <p>Now numLives has a value of 45!</p>
+
+    <p>let numLives = 9;</p>
+    <p>numLives /= 5</p>
+    <p>Now numLives has a value of 1.8!</p>
+    <hr />
+    <p>let bankBalance = 100;</p>
+    <p>bankBalance /= 2;</p>
+    <p>bankBalance += 10;</p>
+    <p>Now bankBalance has a value of 60!</p>
+
+    <h3>variable ++ and variable --</h3>
+    <p>This shorthand is useful for changing the value by 1.</p>
+    <p>let score = 20;</p>
+    <p>score++;</p>
+    <p>score now has a value of 21!</p>
+    <p>let coins = 35;</p>
+    <p>coins --;</p>
+    <p>coins now has a value of 34!</p>
+  </body>
+</html>

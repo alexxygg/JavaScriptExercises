@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running JS from a script</title>
+    <script src="jsFromFile.js"></script>
+  </head>
+  <body>
+    <h1>Running JS from a script</h1>
+    <p>We first need to create a file ending in .js.</p>
+    <p>
+      Then, we must link it to our HTML file like with a CSS file, only this
+      time it is with the script element, the src or source will be the location
+      of the js file in our local computer.
+    </p>
+    <p>
+      We added two console.log messages and also created a variable on the js
+      file.
+    </p>
+    <p>Once we opened the console we could see:</p>
+    <p>This is visible in the console</p>
+    <p>That´s it folks!</p>
+    <p>We also made the variable:</p>
+    <p>let visibleInConsole = 75 + 75;</p>
+    <p>Once we entered:</p>
+    <p>visibleInConsole;</p>
+    <p>We got this:</p>
+    <p>150</p>
+    <hr />
+    <p>
+      We normally place the script src at the last line before the closing body
+      element, in case the browser has trouble loading other things.
+    </p>
+  </body>
+</html>

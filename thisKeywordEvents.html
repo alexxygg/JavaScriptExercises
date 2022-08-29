@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this Keyword and Events</title>
+  </head>
+  <body>
+    <h1>this Keyword and Events</h1>
+
+    <p>
+      These buttons and divs change their background color and also their text
+      color randomly when clicked.
+    </p>
+    <button>Click Me!</button><button>Click Me!</button
+    ><button>Click Me!</button><button>Click Me!</button
+    ><button>Click Me!</button><button>Click Me!</button
+    ><button>Click Me!</button><button>Click Me!</button
+    ><button>Click Me!</button><button>Click Me!</button>
+
+    <div>Click Me! I'm a div.</div>
+    <div>Click Me! I'm a div.</div>
+    <div>Click Me! I'm a div.</div>
+    <div>Click Me! I'm a div.</div>
+    <img src="randomRGBColor.png" alt="" />
+    <p>
+      We used two different functions, one for each element type, we had to
+      duplicate some code to get it working on both elements.
+    </p>
+    <img src="noThisKeywordrandomRGB.png" alt="" />
+    <p></p>
+
+    <p>
+      We can instead use the this keyword to save what we are changing, so there
+      is no more need to make a specific function for each, we can make a
+      generic one and call it where we need it.
+    </p>
+    <p>
+      We no longer need to declare a function as an argument, just pass the
+      function name with NO PARENTHESIS.
+    </p>
+    <img src="thisKeywordrandomRGBCorrect.png" alt="" />
+    <p></p>
+    <button>Click Me!</button><button>Click Me!</button
+    ><button>Click Me!</button><button>Click Me!</button
+    ><button>Click Me!</button><button>Click Me!</button
+    ><button>Click Me!</button><button>Click Me!</button
+    ><button>Click Me!</button><button>Click Me!</button>
+
+    <div>Click Me! I'm a div.</div>
+    <div>Click Me! I'm a div.</div>
+    <div>Click Me! I'm a div.</div>
+    <div>Click Me! I'm a div.</div>
+    <script src="thisKeywordEvents.js"></script>
+  </body>
+</html>

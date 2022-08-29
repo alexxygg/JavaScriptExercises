@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <h1>Strings</h1>
+    <p>
+      This is another primitive value type. We store text, symbols and numbers
+      in them.
+    </p>
+    <p>
+      We can use single quotes or double quotes, but we can not start a string
+      with one and finish with the other, we would get an error.
+    </p>
+    <p>let username = "danny";</p>
+    <p>let username = "George";</p>
+    <p>let name = 'Alex';</p>
+    <p>They can have spaces once inside the quotes.</p>
+    <p>"My name is Alex."</p>
+
+    <p>
+      If we are to include one or the other inside our string, we should do it
+      logically.
+    </p>
+    <p>"The TV screen is 55' diagonally."</p>
+    <p>'and I quote, "I will never do that again".'</p>
+    <p>let bestColor = "purple";</p>
+    <p>let quote = 'You had me at "hello"';</p>
+    <p>We should use the same type of string in a single document.</p>
+    <hr />
+    <p>
+      Creating a string with a number inside it does not mean it is a number.
+    </p>
+    <p>
+      We can make a string with a single character or none at all, called an
+      empty string "".
+    </p>
+
+    <h2>Strings are indexed</h2>
+    <p>
+      Each character has a corresponding index, which is in relation to its
+      position.
+    </p>
+    <p>let animal = "Giant Octopus";</p>
+    <p>animal[0] = "G"</p>
+    <p>animal[1] = "i"</p>
+    <p>animal[2] = "a"</p>
+    <p>animal[3] = "n"</p>
+    <p>animal[4] = "t"</p>
+    <p>animal[5] = ""</p>
+    <p>animal[6] = "O"</p>
+    <p>animal[7] = "c"</p>
+    <p>animal[8] = "t"</p>
+    <p>animal[9] = "o"</p>
+    <p>animal[10] = "p"</p>
+    <p>animal[11] = "u"</p>
+    <p>animal[12] = "s"</p>
+    <p>"Giant Octopus".lenght;</p>
+    <p>Result: 13</p>
+    <hr />
+    <p>"animal".lenght;</p>
+    <p>
+      Result is 6, although the last letter, "l", is one less than that, index
+      5.
+    </p>
+    <h2>Spacing strings / Concatination</h2>
+    <p>
+      We can not change a string simply by updating its value, we would be
+      creating a totally new string instead.
+    </p>
+    <p>
+      Here we try to concatinate these two strings, but since neither have a
+      space at the end or start respectively, they are just next to each other
+      in the result.
+    </p>
+    <p>let firstName = "Alejandro";</p>
+    <p>let lastName = "Perez";</p>
+    <p>firstName + lastName;</p>
+    <p>"AlejandroPerez"</p>
+    <p>
+      Here we create a string that only has a space in it, and add it in between
+      our two original strings.
+    </p>
+    <p>firstName + " " + lastName;</p>
+    <p>"Alejandro Perez"</p>
+    <p>We can store this new string in a new variable like this:</p>
+    <p>let fullName = firstName + " " + lastName;</p>
+  </body>
+</html>

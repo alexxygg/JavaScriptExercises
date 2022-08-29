@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Call Stack</title>
+  </head>
+  <body>
+    <h1>The Call Stack</h1>
+    <p>It works like a regular stack of physical objects.</p>
+    <p>Last in (top), first out(top)</p>
+    <p>
+      Here we have an example of a function, which calls another function in
+      order to provide a boolean result.
+    </p>
+    <img src="callStackExample.png" alt="" />
+    <p>
+      The squared triangle checker function needs to run the aquare function 3
+      times in order to determine if the arguments we provide are true or false
+      in accordance to what a square triangle is.(one right angle)
+    </p>
+    <p>If we passed in 3,4 and 5...</p>
+    <p>It checks for if this expression is either true or false --></p>
+    <p>(square(3) + square(4) === square(5);)</p>
+    <p>It will:</p>
+    <ol>
+      <li>Go to the square function</li>
+      <li>Get the product of 3*3. (9)</li>
+      <li>Return to the square function with the value of 9.</li>
+      <li>((9) + square(y) === square(z);)</li>
+      <li>Go to the square function</li>
+      <li>Get the product of 4*4. (16)</li>
+      <li>Return to the square function with the value of 16.</li>
+      <li>((9) + (16) === square(z);)</li>
+      <li>Go to the square function</li>
+      <li>Get the product of 5*5. (25)</li>
+      <li>Return to the square function with the value of 25.</li>
+      <li>((9) + (16) === (25);)</li>
+      <li>
+        Determine that the arguments we passed result in true based on our
+        function.
+      </li>
+    </ol>
+    <p>
+      SO if we have code that runs before and after, like simple console logs,
+      and we are in the middle of running our function with these values, we
+      would see the message we ran before the function already printed in the
+      console, but the one we have after the function would have to wait until
+      the function completely finishes to appear in the console too.
+    </p>
+    <script src="theCallStack.js"></script>
+  </body>
+</html>

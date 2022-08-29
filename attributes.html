@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attributes</title>
+  </head>
+  <body>
+    <h1>Attributes</h1>
+    <p>We can access attributes with document.querySelector/ All("")</p>
+    <ul>
+      <li>document.querySelector("img").src</li>
+      <li>document.querySelector("img").href</li>
+      <li>document.querySelector("img").title</li>
+    </ul>
+    <p>But there are also methods we can use.</p>
+    <p>
+      There can sometimes be minor differences between how we access an
+      attribute, like with href when we may get a slightly longer or shorter
+      href file path.
+    </p>
+    <img src="getAttribute.png" alt="" />
+    <p>We can also modify an attribute with setAttribute(" , ").</p>
+    <p>We need a comma to separate the attribute and the new value.</p>
+    <img src="setAttribute.png" alt="" />
+    <p>We can modify an input type this way too.</p>
+    <p>
+      Here we have an input for text, we access its attributes, type and
+      placeholder first.
+    </p>
+    <p>We then modify the tpe to password.</p>
+    <img src="getAndSetAttributeInputType.png" alt="" />
+    <p>
+      And as we've seen, there are multiple ways to acess and modify our
+      attributes!
+    </p>
+    <img src="alternativesGetAttribute.png" alt="" />
+  </body>
+</html>

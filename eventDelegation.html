@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event delegation</title>
+  </head>
+  <body>
+    <h1>Event delegation</h1>
+    <p>
+      Event delegation helps us perform actions or run code on elements that do
+      not yet exist upon loading our webpage.
+    </p>
+    <p>
+      A good example is with comments from users, since they will not yet exist
+      on the webpage when the user is seeing a post. He/she may decide to
+      comment a minute after the post has been on the user's display.
+    </p>
+    <p>We delegate by performing our code on the parent element.</p>
+    <hr />
+    <p>Here is an example:</p>
+    <p>We have a form we use to post comments on a webpage.</p>
+    <p>
+      We can add an event listener for clicks on any elements that are exactly
+      an li inside our ul, wheter it already exists or not.(Any other element
+      would not be removed or deleted.)
+    </p>
+    <h3>.target</h3>
+    <p>
+      We can do this with .target, which selects whatever the user interacted
+      with. It is run after the event object!
+    </p>
+    <h3>nodeType</h3>
+    <p>
+      nodeType checks the element type, it will return the type of what the user
+      clicked, which we need here to make sure we don't delete something other
+      than a comment.
+    </p>
+    <hr />
+    <img src="eventDelegationHTML.png" alt="" />
+    <img src="eventDelegation.png" alt="" />
+
+    <h1>Leave us a comment below!</h1>
+    <p>Click on your posted comment to delete it.</p>
+    <form id="form">
+      <input id="input" type="text" />
+      <button id="button">Submit comment.</button>
+    </form>
+    <ul id="ul">
+      <p>A paragraph inside the ul.</p>
+      <h4>A h4 inside the ul.</h4>
+      <li>A comment.</li>
+    </ul>
+
+    <script src="eventDelegation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+  </head>
+  <body>
+    <h1>Event Bubbling</h1>
+    <p>
+      When we have multiple events for various HTML elements nested withing one
+      another, we can accidentally trigger other events we didn't want to.
+    </p>
+    <p>Example:</p>
+    <p>
+      If we have a div with a section inside, and that section has a button
+      inside:
+    </p>
+    <p>
+      If each of these 3 elements have an onclick event, and we happen to click
+      the button, which is the element most deeply nested in the example, we
+      will trigger all 3 events!
+    </p>
+    <div onclick="alert('Alert, div clicked.')">
+      Div
+      <section onclick="alert('Alert, section clicked.')">
+        Section
+        <button onclick="alert('Alert, button clicked.')">Click Me.</button>
+        Section
+      </section>
+      Div
+    </div>
+    <p>
+      We may sometimes want an event to bubble, like a wave or chain-reaction.
+    </p>
+    <img src="eventBubbling.png" alt="" />
+    <h2>stopPropagation()</h2>
+    <p>
+      We can use this method on our event object to make sure the event doesn't
+      bubble up, or trigger other events which may be chained to the element.
+    </p>
+    <p>Here we use the same example:</p>
+    <p>Clicking the nested elements will no longer trigger the outer events!</p>
+    <p>
+      (Since the outer element, our div, would not trigger any events anyway.)
+    </p>
+
+    <div onclick="alert('Alert, div clicked.')">
+      Div
+      <section id="sectionStop" onclick="alert('Alert, section clicked.')">
+        Section
+        <button id="buttonStop" onclick="alert('Alert, button clicked.')">
+          Click Me.
+        </button>
+        Section
+      </section>
+      Div
+    </div>
+    <img src="stopPropagationEventBubblingHTML.png" alt="" />
+    <img src="stopPropagationEventBubblingJS.png" alt="" />
+    <script src="eventBubbling.js"></script>
+  </body>
+</html>

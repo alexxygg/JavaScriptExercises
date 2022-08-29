@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getElementById</title>
+  </head>
+  <body>
+    <h1>Selecting</h1>
+    <p>First we select, so we can later manipulate.</p>
+    <h2>getElementById("")</h2>
+    <p>We can select a specific JS Object with getElementById.</p>
+    <p>
+      We can then save the object to a variable, to later access the object
+      along with all the object properties in a single place.
+    </p>
+    <p>
+      Here we access an element with an id called toc, short for table of
+      contents.
+    </p>
+    We then save the JS object to a variable called toc. Finally, we access the
+    object properties with console.dir() and the variable between the
+    parenthesis.
+    <img src="getElementById.png" alt="" />
+    <p>If we had a heading and an image with ids of mainheading and unicorn:</p>
+    <p>const heading = document.getElementById("mainheading")</p>
+    <p>const image = document.getElementById("unicorn")</p>
+    <h2>getElementsByTagName("")</h2>
+    <p>Here we get ALL elementS by tag name, not just one element by Id.</p>
+    <p>
+      This will return an HTML collection, which is all the elements that match
+      the tag we specify, in a single JS object.
+    </p>
+    <p>
+      Here is an example, we have 2 images in a webpage, we are accessing the
+      second one by specifying the index when we console.dir.
+    </p>
+    <img src="getElementsByTagName.png" alt="" />
+    <p>We can iterate over the array of objects we are returned.</p>
+    <p>
+      IT WILL NOT WORK LIKE AN ARRAY, SINCE THEY ARE BOTH JS OBJECTS. WE ARE
+      GETTING AN HTML COLLECTION, CONSISTING OF VARIOUS OBJECTS.
+    </p>
+    <p>
+      Clicking on the links will open the picture in the sources panel of the
+      dev tools!
+    </p>
+    <img src="getElementsByTagNameIteration.png" alt="" />
+    <p>And we can start manipulating the elements now:</p>
+    <p>
+      All images were replaces with one that we were returned from the list of
+      object images.
+    </p>
+    <p>We applied the image with a for of loop to every img element.</p>
+    <img src="originalPokemonWebpage.png" alt="" />
+    <img src="modifiedImagesThroughGetElementsByTagName.png" alt="" />
+    <h2>getElementsByClassName("")</h2>
+    <p>Rather than Id or tag name, we are using classes.</p>
+    <p>The only change here is the syntax. getElementsByClassName(".class")</p>
+    <p>THere should be a period or dot before the class name.</p>
+  </body>
+</html>

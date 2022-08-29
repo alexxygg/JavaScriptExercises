@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent, Child and Sibling</title>
+  </head>
+  <body>
+    <h1>Parent, Child and Sibling</h1>
+    <p>
+      We can access a relative element in perspective of the initial element we
+      call on.
+    </p>
+    <img src="movingThroughRelativeElements.png" alt="" />
+    <p>We can use:</p>
+    <ul>
+      <li>childElementCount (number of children)</li>
+      <li>children[] (Access specific child element)</li>
+      <li>parentElement (Access parent element)</li>
+      <li>previousElementSibling (based on current child)</li>
+      <li>nextElementSibling (based on current child)</li>
+    </ul>
+    <img src="movingThroughRelativeElementsConsole.png" alt="" />
+    <p>
+      nextSibling and previousSibling WILL RETURN THE NEXT NODE.(Many times
+      text, since JS usually uses a whitespace between elements.)
+    </p>
+  </body>
+</html>

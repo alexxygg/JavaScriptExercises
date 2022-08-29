@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping Pong Score Keeper</title>
+    <style>
+      .winner {
+        color: green;
+      }
+      .loser {
+        color: red;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="card is-half">
+      <h1 class="title is-1 has-text-centered">Ping Pong Score Keeper</h1>
+      <figure class="image is-5by3">
+        <img src="lennart-schneider-2Ov5_5WKaKM-unsplash.jpg" alt="" />
+      </figure>
+      <div>
+        <h1 class="title is-3 has-text-centered">
+          <span id="p1span">0</span> to <span id="p2span">0</span>
+        </h1>
+      </div>
+      <p class="title is-4 has-text-centered">
+        Use the buttons below to keep score.
+      </p>
+      <div>
+        <div class="is-half is-narrow">
+          <h2 class="title is-5 column">Playing to:</h2>
+          <div class="select is-narrow" id="">
+            <select id="select">
+              <option value="3">3</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+              <option value="9">9</option>
+              <option value="11">11</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <button
+          href="#"
+          class="card-footer-item button has-background-success"
+          id="player1AddButton"
+        >
+          +1 Player 1
+        </button>
+        <button
+          href="#"
+          class="card-footer-item button has-background-success"
+          id="player2AddButton"
+        >
+          +1 Player 2
+        </button>
+        <button
+          href="#"
+          class="card-footer-item button has-background-danger"
+          id="resetButton"
+        >
+          Reset
+        </button>
+      </footer>
+    </div>
+
+    <script src="pingPongScoreKeeper.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methods with Arguments</title>
+  </head>
+  <body>
+    <h1>Methods with Arguments</h1>
+    <p>
+      Some string methods allow us to enter arguments to be more specific of
+      what we are trying to do.
+    </p>
+    <h2>.indexOf()</h2>
+    <p>This string method tells us where our argument is indexed.</p>
+    <p>let catchPhrase = "Hasta la vista, baby."</p>
+    <p>catchPhrase.indexOf("s")</p>
+    <p>
+      This will give us the index of the first occurrence of a letter 's' only.
+    </p>
+    <p>Results in: 2</p>
+    <h2>Portions of a string</h2>
+    <p>catchPhrase.indexOf("vista")</p>
+    <p>Results in: 9</p>
+    <hr />
+    <p>
+      If we look for something that does not exist, it will give us a result of
+      -1.
+    </p>
+    <p>catchPhrase.indexOf("!")</p>
+    <p>Results in: -1</p>
+    <hr />
+    <h2>.slice()</h2>
+    <p>
+      It returns a portion of a string, we can pass in a beginning index and an
+      ending index, which is optional.
+    </p>
+    <p>
+      The value we give it first is the starting point for the returning sliced
+      string.
+    </p>
+    <h3>starting point only</h3>
+    <p>catchPhrase.slice(16);</p>
+    <p>
+      Here the character at index 16 is letter b, so it will include it in the
+      new string and end where the string normally ends, since we did not
+      declare a limit to the slice.
+    </p>
+    <p>RESULTS IN --> 'baby.'</p>
+    <h3>starting and ending points</h3>
+    <p>
+      When also using an ending point for our sliced string, we must know that
+      the two indexes must be separated by a comma.
+    </p>
+    <p>
+      Also that the ending index is not included, so a .slice(5 , 9) would
+      include index 5, 6, 7 and 8.
+    </p>
+    <p>
+      Index 6 has the letter 'l' from 'la'. Index 14 is the comma after 'vista',
+      this comma will not be included.
+    </p>
+    <p>catchPhrase.indexOf(6 , 14)</p>
+    <p>RESULTS IN --> 'la vista'</p>
+    <h3>Negatives</h3>
+    <p>
+      We can enter a negative number, but it will return characters starting
+      from the end of the string.
+    </p>
+    <p>catchPhrase.slice(-1);</p>
+    <p>'.'</p>
+    <p>catchPhrase.slice(-3);</p>
+    <p>'by.'</p>
+    <p>catchPhrase.slice(-5);</p>
+    <p>'baby.'</p>
+    <h2>.replace()</h2>
+    <p>It helps us replace certain characters or words from our string.</p>
+    <p>
+      We need to enter two parameters, what we are trying to replace (what the
+      method will look for in our existing string), and what we want to replace
+      that with (the new character or word, etc.).
+    </p>
+    <p>catchPhrase.replace("vista", "replacement");</p>
+    <p>RESULTS IN --> 'Hasta la replacement, baby.'</p>
+    <p>It will only replace the first matching instance.</p>
+    <h2>.repeat()</h2>
+    <p>"I will not bite my nails. ".repeat(5)</p>
+    <p>
+      'I will not bite my nails. I will not bite my nails. I will not bite my
+      nails. I will not bite my nails. I will not bite my nails. '
+    </p>
+  </body>
+</html>

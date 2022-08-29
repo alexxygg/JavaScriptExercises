@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Templates</title>
+  </head>
+  <body>
+    <h1>String Templates</h1>
+    <p>There are multiple ways to make templates for our strings.</p>
+    <p>
+      Here we have a few variables, they represent different types of amounts
+      and information.
+    </p>
+    <p>let eggPrice = .20;</p>
+    <p>let eggsBought = 36;</p>
+    <p>
+      let summary = "You bought " + eggsBought + " eggs for a total of $" +
+      eggPrice * eggsBought + " dollars!"
+    </p>
+    <p>RESULTS IN --> 'You bought 36 eggs for a total of $7.2 dollars!'</p>
+    <h2>Template literals ${}</h2>
+    <p>
+      These templates make it easier to do operations through expressions, but
+      they need back-ticks ```````````` when opening and closing the strings.
+      (AltGr + }) and a dollar sign followed by opening and closing curly
+      braces, where our math will be.
+    </p>
+    <p>`Hello, you paid ${55 + 65} dollars.`</p>
+    <p>RESULTS IN --> 'Hello, you paid 120 dollars.'</p>
+    <p>
+      This way, it will be evaluated in JS, if we use single or double quotes it
+      will look like this:
+    </p>
+    <p>"Hello, you paid ${55 + 65} dollars."</p>
+    <p>RESULTS IN --> 'Hello, you paid ${55 + 65} dollars.'</p>
+    <hr />
+    <h2>First template but with LITERALS.</h2>
+    <p>Originally:</p>
+    <p>
+      let summary = "You bought " + eggsBought + " eggs for a total of $" +
+      eggPrice * eggsBought + " dollars!"
+    </p>
+    <p>Now:</p>
+    <p>
+      let summary = `You bought ${eggsBought} eggs for a total of $${eggPrice *
+      eggsBought} dollars!`
+    </p>
+    <p>BOTH RESULT IN --> 'You bought 36 eggs for a total of $7.2 dollars!'</p>
+    <hr />
+    <p>
+      We used a lot less quotes, and no plus signs to string it all together!
+    </p>
+    <p>
+      And if we wanted, we could use string methods inside the curly braces too.
+    </p>
+  </body>
+</html>

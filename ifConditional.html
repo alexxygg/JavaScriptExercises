@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if() Conditional</title>
+    <script src="ifConditional.js"></script>
+  </head>
+  <body>
+    <h1>if() Conditional</h1>
+    <p>The if conditional helps us make decisions.</p>
+    <p>Let´s say we declare a variable:</p>
+    <p>let stars = 5;</p>
+    <p>We can now use the if conditional to make a decision.</p>
+    <p>Here it is:</p>
+    <p>if(stars === 5){</p>
+    <p>("You have 5 stars.");</p>
+    <p>}</p>
+    <p>In the console we would see:</p>
+    <p>You have 5 stars.</p>
+    <hr />
+    <p>
+      If the code above was false, anything inside the curly braces would not
+      run.
+    </p>
+    <p>
+      We added two console.log message, one before and one after the if
+      conditional statement, those will run regardless.
+    </p>
+    <h2>random example</h2>
+    <p>let random = Math.random();</p>
+    <p>if (random > 0.5) {</p>
+    <p>console.log("If you can see this, your number was more than 0.5!");</p>
+    <p>console.log(random);</p>
+    <p>}</p>
+    <p>Succesful attempt:</p>
+    <p>If you can see this, your number was more than 0.5!</p>
+    <p>0.7659067413046483</p>
+    <hr />
+    <p>
+      We could add another if conditional for when the number is less than 0.5.
+      But there are easier ways to do so...
+    </p>
+    <h2>Check if a number is even or odd</h2>
+    <p>First we need to make a variable for a random number:</p>
+    <p>let randomNumber = Math.floor(Math.random()*100)+1;</p>
+    <p>We can get any number including and between 1 and 100.</p>
+    <p>
+      Next we need to make an if condition. Inside it we will check to see if
+      the number is divisible by 2 with the remainder operand:
+    </p>
+    <p>if(random %2 ===0){</p>
+    <p>console.log("The number is even!");</p>
+    <p>}</p>
+    <p>
+      So if the number can not be divided by 2, we know it is odd, and no
+      message will display.
+    </p>
+  </body>
+</html>

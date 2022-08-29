@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>const variable used for arrays</title>
+  </head>
+  <body>
+    <h1>const variable used for arrays</h1>
+    <p>
+      We can use a const for our array variable, while still adding, removing
+      and modifying the content inside the array. IT WORKS:
+    </p>
+    <p>const array = ["one","two"];</p>
+    <p>array.push("three");</p>
+    <p>array;</p>
+    <p>["one","two","three"];</p>
+    <p>
+      What we can not do is modify the array as an element. We can not change
+      the array to a number or a string, as it was set as an array in the first
+      place.
+    </p>
+    <p>
+      We can not even change an array by updating it to the exact values, since
+      JS would now see it as a different reference.
+    </p>
+    <p>const array = ["one","two"];</p>
+    <p>array = ["one","two"];</p>
+    <p>ERROR!!!</p>
+    <p>
+      That woud create 2 arrays, which is impossible since we set our array to
+      be a constant variable, it can not be changed!
+    </p>
+    <p>
+      This is good because we can rely that our array container will be the
+      same.
+    </p>
+    <p>
+      We can renovate inside the house, but not change all the walls and roof.
+    </p>
+  </body>
+</html>

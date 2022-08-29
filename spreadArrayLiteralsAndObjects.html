@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>...spread Array Literals and Objects</title>
+    <script src="spreadArrayLiterals.js"></script>
+  </head>
+  <body>
+    <h1>...spread Array Literals</h1>
+    <p>We can also use the spread method with array literals.</p>
+    <p>
+      The order in which we call the spread array is important, as that will be
+      the way it will be ordered in the new array.
+    </p>
+    <p>
+      The original arrays are not changes, we are basically taking a copy of the
+      array we spread for our new array.
+    </p>
+    <p>We can also add items on top of the spread arrays.</p>
+    <img src="spreadArrayLiterals.png" alt="" />
+    <img src="spreadArrayLiteralsConsole.png" alt="" />
+    <p>
+      And similarly, we can spread an array item into a new array, where every
+      character of the item is a new item of a new array.
+    </p>
+    <img src="anotherExampleSpreadArrayLiteralsConsole.png" alt="" />
+    <h1>...spread Objects</h1>
+    <p>We can copy, tweak, combine object properties, etc.</p>
+    <img src="spreadObjects.png" alt="" />
+    <img src="spreadObjectsConsole.png" alt="" />
+    <p>
+      IF THERE IS A CONFLICT, LIKE A SAME KEY WITH A DIFFERENT VALUE FOR EACH
+      OBJECT'S PROPERTIES, THE LAST ONE TO BE SPREAD WILL KEEP ITS VALUE!
+    </p>
+    <p>
+      In this case, both xx and yy have a color key, but only yellow is seen
+      once both objects are combined into the new one, blue is just eliminated.
+    </p>
+    <img src="anotherExampleSpreadObjectsConsole.png" alt="" />
+    <p>
+      We can use this to retrieve user info from a form, and add our own info to
+      a new object, like assigning a unique ID for each user for quick access to
+      his/her information, or granting special permissions.
+    </p>
+    <img src="spreadObjectForm.png" alt="" />
+  </body>
+</html>

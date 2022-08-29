@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equality Operators</title>
+  </head>
+  <body>
+    <h1>Equality Operators</h1>
+    <h2>double equals ==</h2>
+    <p>
+      Checks if two values are equal, but does not check if types are also
+      equal.
+    </p>
+    <p>1==1;</p>
+    <p>true</p>
+    <p>Here there is no need to convert, as they are the same.</p>
+    <p>1=="1"</p>
+    <p>
+      Here they are first converted to the same type and then compared. This is
+      only done when possible.
+    </p>
+    <h2>Weird cases</h2>
+    <p>null == undefined;</p>
+    <p>true</p>
+    <p>0 == false;</p>
+    <p>true</p>
+    <p>0 == ""; (empty string)</p>
+    <p>true</p>
+    <h2>not equal !=</h2>
+    <p>
+      Checks if two numbers are not equal, again without checking for types.
+    </p>
+    <p>1 != 2;</p>
+    <p>true (YES, They are NOT equal)</p>
+    <p>1 != "1";</p>
+    <p>false (NO, They ARE equal)</p>
+    <h2>tripple equals === (strict equality)</h2>
+    <p>
+      This one does care about type, it does not do any attempt to change them
+      first.
+    </p>
+    <p>1 === "1";</p>
+    <p>false (NO, They are NOT equal)</p>
+    <p>0 === false;</p>
+    <p>false (NO, They are NOT equal)</p>
+    <h2>triple not equal !== (strict inequality)</h2>
+    <p>
+      This one again checks for inequality for types, no attempt to compare
+      different types.
+    </p>
+    <p>1 !== "1";</p>
+    <p>true (YES, They are NOT equal)</p>
+    <p>2 !== 2</p>
+    <p>false (NO, They ARE equal)</p>
+  </body>
+</html>

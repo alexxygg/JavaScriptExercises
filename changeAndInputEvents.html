@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change & Input Events</title>
+  </head>
+  <body>
+    <h1>Change & Input Events</h1>
+    <h2>change Event</h2>
+
+    <p>
+      This event will check and perform an action every time the user makes a
+      change to the input, as long as they click away from the input field.
+    </p>
+    <p>
+      If the user clicks the input and clicks away without making any changes,
+      the event WILL NOT be triggered.
+    </p>
+    <p>
+      (It works when user leaves the input and there are new changes, not when
+      something changes or happens on the user's screen.)
+    </p>
+    <p>Other keys like arrows and shift will not trigger the event either.</p>
+    <p>
+      We could use key or value for a keydown event, but it would register any
+      key, not just characters accepted on the current input.
+    </p>
+    <input id="change" type="text" />
+    <p></p>
+    <img src="changeEvent.png" alt="" />
+    <h2>input Event</h2>
+    <p>
+      Here we will run the code we want every time there is aan actual change to
+      the input, be it a single character, pasting something, text to speech,
+      etc.
+    </p>
+    <p>It triggers the event whenever anything inside the input changes.</p>
+    <p>
+      (clicking away without changes, arrow keys, shift key, etc. will not
+      trigger event, just like with change event listerners.)
+    </p>
+    <p>
+      It actually doesn't even check for leaving the input field/clicking away,
+      only for changes to the field!
+    </p>
+    <input id="input" type="text" />
+    <p></p>
+    <img src="inputEvent.png" alt="" />
+    <p>We can have it work as a live preview on the screen.</p>
+    <input id="livePreview" type="text" />
+    <p></p>
+    <h1 id="empty"></h1>
+    <img src="inputEventLivePreviewH1.png" alt="" />
+    <h2>Another Example</h2>
+    <p>
+      Here we return the value of the h1 to the default ONLY if our input field
+      is empty. If not, we have a special message display with the user's
+      username.
+    </p>
+    <h1 id="h1">Enter Your Username</h1>
+    <input type="text" id="username" />
+    <p></p>
+    <img src="anotherExampleInputEvent.png" alt="" />
+    <script src="changeAndInputEvents.js"></script>
+  </body>
+</html>

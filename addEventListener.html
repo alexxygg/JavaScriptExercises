@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addEventListener</title>
+  </head>
+  <body>
+    <h1>addEventListener</h1>
+    <p>
+      We can use event listeners to pass in 2 arguments, the first is what we
+      are listening for, and the second is the action or callback we want to run
+      when this happens.
+    </p>
+    <img src="addEventListener.png" alt="" />
+    <p></p>
+    <button class="btn1">Click Me!</button>
+    <p>This approach allows us to run multiple callbacks on the same event.</p>
+    <p>
+      WE COULD NOT RUN 2 FUNCTIONS ON THE SAME EVENT BECAUSE THE SECOND WOULD
+      OVERRIDE THE FIRST, LIKE WHEN A CSS STYLE IS DECLARED AT THE END COMPARED
+      TO ONE DECLARED BEFORE IT.(Unless we have both actions declared in a
+      single function.)
+    </p>
+    <p>With addEventListener we CAN include 2 or more functions.</p>
+    <p>There's more flexibility this way, and is much more commonly used.</p>
+    <h2>Another example.</h2>
+    <img src="anotheraddEventListenerExample.png" alt="" />
+    <p></p>
+    <button id="hello">Hello</button>
+    <button id="goodbye">Goodbye</button>
+    <script src="addEventListener.js"></script>
+  </body>
+</html>

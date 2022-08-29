@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String methods</title>
+  </head>
+  <body>
+    <h1>String methods</h1>
+    <p>
+      BY entering a string in the console and adding a dot right after it, we
+      can see all the different methods we can use.
+    </p>
+    <p>SYNTAX --> thing.method();</p>
+    <h2>.toUpperCase()</h2>
+    <p>let msg = "leave me alone please."</p>
+    <p>msg.toUpperCase();</p>
+    <p>"LEAVE ME ALONE PLEASE."</p>
+    <p>Now we can store the new string in a new variable.</p>
+    <p>let angryMsg = msg.toUpperCase();</p>
+    <p>msg;</p>
+    <p>"leave me alone please."</p>
+    <p>angryMsg;</p>
+    <p>"LEAVE ME ALONE PLEASE."</p>
+    <p>These are the 2 variable we made.</p>
+    <h2>toLowerCase()</h2>
+    <p>Does the opposite of toUpperCase.</p>
+    <p>let angryLetters = "ABCDEFGH";</p>
+    <p>angryLetters.toLowerCase;</p>
+    <p>'abcdefgh'</p>
+    <p>
+      Here, again, the resulting value is not saved, if we have any plans for
+      it, we need to create a new variable.
+    </p>
+    <p>let happyLetters = angryLetters.toLowerCase();</p>
+    <p>happyLetters;</p>
+    <p>'abcdefgh'</p>
+    <p>And we can still retrieve our original angryLetters.</p>
+    <p>angryLetters;</p>
+    <p>"ABCDEFGH"</p>
+    <h2>trim()</h2>
+    <p>
+      This one creates a new string without the whitespaces at the beginning or
+      end, no matter how many there are on either side. It keeps all the spaces
+      in between.
+    </p>
+    <p>let userInput = " hi my name is john "</p>
+    <p>userInput.trim();</p>
+    <p>'hi my name is john'</p>
+    <h2>Chaining methods</h2>
+    <p>
+      We can chain methods to have multiple actions done for the end result.
+    </p>
+    <p>let lazyTypedGreeting = " hello, my name is john ";</p>
+    <p>
+      Here the string has spaces on both sides, and we want to make it all upper
+      case too. SO we will chain two methods to accomplish this.
+    </p>
+    <p>lazyTypedGreeting.trim().toUpperCase();</p>
+    <p>'HELLO, MY NAME IS JOHN'</p>
+    <p>
+      We only had to add the second method after the first! The spaces were
+      trimmed and all letters were made uppercase.
+    </p>
+    <hr />
+    <p>const message = " TASTE THE RAINBOW! ";</p>
+    <p>let whisper = message.toLowerCase().trim();</p>
+    <p>whisper;</p>
+    <p>'taste the rainbow!'</p>
+    <hr />
+    <p>Here we change skateboard to beard!</p>
+    <p>const word = "skateboard";</p>
+    <p>let facialHair = word.slice(5).replace("o", "e");</p>
+    <p>RESULTS IN --></p>
+    <p>facialHair;</p>
+    <p>'beard'</p>
+  </body>
+</html>

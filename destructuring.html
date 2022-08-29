@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Arrays and Objects</title>
+    <script src="destructuring.js"></script>
+  </head>
+  <body>
+    <h1>Destructuring Arrays and Objects</h1>
+    <p>
+      We can destructure array and objects to assign them specific variable
+      names.
+    </p>
+    <h2>Arrays</h2>
+    <p>Here is an example with an array, combined with spread rest.</p>
+    <p>There are 14 items in the original array, which is never modified.</p>
+    <p>
+      We assign a variable name to the first three, and another to the other 11.
+    </p>
+    <img src="destructuringArray.png" alt="" />
+    <h2>Objects</h2>
+    <p>
+      We can do the same wwith objects. We can do them individually or by
+      calling every desired key from the object.
+    </p>
+    <p>THIS WILL CREATE A VARIABLE WITH THE SAME NAME AS THE KEY.</p>
+    <img src="destructuringObjectCode.png" alt="" />
+    <img src="destructuringObjectConsole.png" alt="" />
+    <p>If we want to change the variable names, we can do so like this:</p>
+    <p>
+      THIS MEANS WE WILL NOT BE ABLE TO ACCESS THE OBJECT KEYS WITH THEIR OBJECT
+      NAMES, SINCE WE ARE ONLY CREATING 1 VARIABLE NAME FOR EACH.
+    </p>
+    <img src="destructuringObjectsChangeDefaultVarNames.png" alt="" />
+    <p>
+      If we try to create a variable for a non-existant key, it will just return
+      undefined.
+    </p>
+    <img src="part1destructuringObjectsTip.png" alt="" />
+    <p>
+      If it doesn't yet exist, we can give it a value to update the object
+      properties.
+    </p>
+    <img src="part2destructuringObjectsTip.png" alt="" />
+    <p>
+      And if we try to give a value to an EXISTING key, it will ignore it, since
+      it already will have found a value for the key. No change will occur.
+    </p>
+    <img src="part3destructuringObjectsTip.png" alt="" />
+  </body>
+</html>

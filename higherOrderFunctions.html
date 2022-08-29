@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher order Functions</title>
+    <script src="higherOrderFunctions.js"></script>
+  </head>
+  <body>
+    <h1>Higher order Functions</h1>
+    <p>
+      They help us use functions as arguments for other functions, and to return
+      functions from the function itself.
+    </p>
+    <h2>A function as an argument.</h2>
+
+    <p>Fiest we create a function that works on it's own.</p>
+    <p>
+      Then we create a second function, we will tell it to expect a fuunction as
+      an argument.
+    </p>
+    <p>
+      The parameter can be anything, we will let it know that the parameter is a
+      function on the block.
+    </p>
+    <p>
+      Here we tell it to run the function 10 times. The function we entered is
+      the first one, so it will console log a random number between 1 and 20,
+      ten times.
+    </p>
+    <img src="functionAsArgumentCode.png" alt="" />
+    <p>
+      And here are 3 times we ran the code in the console, the output is
+      different each time.
+    </p>
+    <img src="functionAsArgumentConsole1.png" alt="" />
+    <img src="functionAsArgumentConsole2.png" alt="" />
+    <img src="functionAsArgumentConsole3.png" alt="" />
+    <h2>Returning functions as values</h2>
+    <p>
+      We can also get a function back depending on the arguments we give it, we
+      can later save the new function into a variable with different arguments
+      each time, and name it accordingly.
+    </p>
+    <p>
+      This function checks if num is between 50 and 100, it will only check if
+      it is between those numbers, BUT...
+    </p>
+    <img src="testBetween50and100Code.png" alt="" />
+    <p>
+      We can make our own function too, with placeholders, we can change the
+      placeholders to specific values later, when we save the modified function
+      to a variable.
+    </p>
+    <hr />
+    <p>
+      Here we have a template, the min and max can be changed to fit our needs.
+    </p>
+    <img src="testBetweenTemplateCode.png" alt="" />
+    <p>
+      Here in the console, we made some changes to those parameters, to adapt to
+      what we were trying to check.
+    </p>
+    <img src="testBetweenConsoleFunctions.png" alt="" />
+    <p>
+      areYouAlive checks if the age we enter is between 1 and 112, since that is
+      the age of the oldest person at the moment.
+    </p>
+    <p>
+      legallyNOtAnAdult will check if your age is between 1 and 17, 18 or more
+      will be true.
+    </p>
+    <p>And same for the other example.</p>
+    <hr />
+    <p>
+      Here we set up 2 passwords, and check if the user enters either one, if
+      not exactly one of them, it will not grant access.
+    </p>
+    <img src="test1of2PasswordsTemplateCode.png" alt="" />
+    <p>We made some to make sure they worked, even with strings.</p>
+    <img src="test1of2PasswordsConsoleFunctions.png" alt="" />
+    <hr />
+    <p>
+      And finally, this function, which return a function we can use to check if
+      a user's username and password match the one we have in the system, if not
+      true, we will not let the person access.
+    </p>
+    <img src="userLoginAuthenticatorFunctionCode.png" alt="" />
+    <img src="userLoginAuthenticatorFunctionConsole.png" alt="" />
+  </body>
+</html>

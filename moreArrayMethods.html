@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Array Methods</title>
+    <script src="moreArrayMethods.js"></script>
+  </head>
+  <body>
+    <h1>More Array Methods</h1>
+    <h2>.concat()</h2>
+    <p>
+      This method helps us combine two arrays,the array we pass in the method
+      will then be in a new array after the last item of the first array we used
+      concat on.
+    </p>
+    <p>
+      The original 2 arrays will not be changed, as if working with a string,
+      but we can save the resulting array in a variable if wanted.
+    </p>
+    <p>
+      Here we had 2 arrays; americanCities and europeanCities. After using
+      .concat() we have 3, since we saved the result of the method to
+      worldCities.
+    </p>
+    <img src="concatArrayMethod.png" alt="" />
+    <h2>.includes()</h2>
+    <p>It is a boolean method, it will return true or false.</p>
+    <p>It checks to see if the argument we enter is part of our array.</p>
+    <p>
+      We have to type what we are looking for exactly as it would be named,
+      otherwise it will return false.
+    </p>
+    <img src="includesArrayMethod.png" alt="" />
+    <h2>.indexOf()</h2>
+    <p>It works like when using it with a string.</p>
+    <p>
+      We can check if an item is in an array by entering its name as an
+      argument, it will return the index of the item.
+    </p>
+    <p>Spelling is important here too.</p>
+    <p>If the item does not exist in the array, it will return -1.</p>
+    <p>
+      If there are multiple items with the same name, IT WILL RETUTN THE INDEX
+      OF THE FIRST MATCH, not of every single match.
+    </p>
+    <p>
+      Here is a reminder of the string version of the method and right after the
+      array version.
+    </p>
+    <img src="firstStringIndexOfThen.png" alt="" />
+    <img src="thenArrayIndexOf.png" alt="" />
+
+    <h2>.reverse()</h2>
+    <p>It is destructive, meaning it changes the original array.</p>
+    <p>
+      There is no need to enter an argument, all it will do is take all the
+      items and switch the order in reverse.
+    </p>
+    <p>
+      Here we see that the original array is different after running the method.
+    </p>
+    <img src="reverseArrayMethod.png" alt="" />
+  </body>
+</html>

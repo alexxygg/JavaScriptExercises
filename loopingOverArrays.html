@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looping over arrays</title>
+    <script src="loopingOverArrays.js"></script>
+  </head>
+  <body>
+    <h1>Looping over arrays</h1>
+    <p>
+      We can also use our for loop to work with data structures, like arrays for
+      example.
+    </p>
+    <p>
+      Here we made an array of the top 150 most frequently written words in
+      English.
+    </p>
+    <p>
+      We will use a loop to console.log the index of each word, followed by the
+      value of the array index or word itself.
+    </p>
+    <hr />
+    <p>
+      We give our variable i an initial value of 0, that way we can match it
+      with our first index, index 0.
+    </p>
+    <p>
+      We ask it to check if i is less than the lenght of our variable
+      top150EnglishWords, we don´t use less than or equal to this time, only
+      less than. The reason is that the lenght is one more than the last index,
+      so we would print one saying: 150, undefined. (The last array item of the
+      150 words has an index of 149)
+    </p>
+    <p>
+      And we increase our variable by 1 each time until we reach 149, 1 less
+      than the lenght of the array, 150.
+    </p>
+    <p>
+      Lastly, we console log both the variable value, which is a match to the
+      index of each array item, followed by the specific array item in our words
+      variable that matches that number. (If at 5, the number 5 and the item at
+      index 5. variableName[5];)
+    </p>
+    <img src="loopingOverArrays.png" alt="" />
+    <hr />
+    <h2>Reversed</h2>
+    <p>
+      We set the initial variable i to the number that matches the last index.
+    </p>
+    <p>
+      Alternatively in the second example we use the lenght of our words
+      variable - 1, since the lenght is 150 and our last index is 149.
+    </p>
+    <p>
+      Then, set the condition: as long as i more than or equal to 0...(equal is
+      used to make sure we include the first index item at index 0)
+    </p>
+    <p>i -- just substracts one from our intial variable.</p>
+    <p>Lastly, we print the index matching number and the array item again.</p>
+    <img src="loopingOverArraysReverse.png" alt="" />
+    <p>Another example:</p>
+    <p>
+      Here we print each index, but convert it to uppercase first. We run
+      through every available item in the array, then stop.
+    </p>
+    <img src="anotherLoopingOverArrayExample.png" alt="" />
+  </body>
+</html>

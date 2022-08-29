@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays continuation</title>
+    <script src="arraysPartTwo.js"></script>
+  </head>
+  <body>
+    <h1>Arrays continuation</h1>
+    <p>We can access an array item with:</p>
+    <p>days[0];</p>
+    <p>This will show us index 0 of our array days.</p>
+    <p>RESULTS IN --> "Monday"</p>
+    <p>
+      (days = [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+      "Saturday", "Sunday", ];)
+    </p>
+    <p>We can access a specific index of an array index too.</p>
+    <p>days[0][0];</p>
+    <p>RESULTS IN --> "M"</p>
+    <p>We can change an index of an array index if needed.</p>
+    <p>
+      THIS IS NOT POSSIBLE when working with a string. We can access the
+      specific index of our string, but not modify it.
+    </p>
+    <p>We made an array called colors.</p>
+    <p>let colors = ["redd","oranje","green"]</p>
+    <p>Two of our items are mispelled, we can update their values like this:</p>
+    <img src="fixingArrayItems.png" alt="" />
+    <p>
+      We can change an item to another type too, like to a number or boolean.
+    </p>
+    <hr />
+    <p>
+      We can create new array items and place them wherever we want, even if it
+      is not right after our last defined index item.
+    </p>
+    <p>
+      Here we have created a new index item for our array colors, it is at index
+      6.
+    </p>
+    <p>We only had 3 items before, so the last index filled was 2.</p>
+    <p>Now, all array indexes between 2 and 6 are empty:</p>
+    <img src="emptyArrayIndexes.png" alt="" />
+    <p>
+      They show as undefined, since no value has been given to them, but they
+      can´t just not exist since we defined a value for index 6 already!
+    </p>
+    <p>Here we update an item, and also change another one.</p>
+    <img src="anotherExampleArrayUpdating.png" alt="" />
+  </body>
+</html>

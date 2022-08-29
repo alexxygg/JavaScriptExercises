@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reduce() Method</title>
+    <script src="reduceMethod.js"></script>
+  </head>
+  <body>
+    <h1>reduce() Method</h1>
+    <p>It takes an array and reduces it to a single value.</p>
+    <p>
+      It has two parameters, the first is the total or acummulated value, and
+      the second is the current value.
+    </p>
+    <hr />
+    <p>
+      Here we have an array, it represents a cart with the prices of each item.
+    </p>
+    <p>Here we see we can do the sum with a for of loop.</p>
+    <img src="cartForOfCode.png" alt="" />
+    <p>Now we have the same, but with a reduce method.</p>
+    <p>
+      The method will run through every amount and sum it in the end, its value
+      will be assigned to total2.
+    </p>
+    <img src="cartReduceMethodCode.png" alt="" />
+    <p>Both result in the same amount.</p>
+    <img src="cartsConsole.png" alt="" />
+    <p>
+      We can add a second argument to our reduce method, which will be the
+      initial value for the total/accumulated.
+    </p>
+    <p>Imagine there is a 5 dollar delivery fee:</p>
+    <p>The initial value is 5, so everything will be summed on top of it.</p>
+    <img src="reduceWithSecondArgumentCode.png" alt="" />
+    <img src="reduceWithSecondArgumentConsole.png" alt="" />
+    <hr />
+    <p>
+      We can use the reduce method to find the highest or lowest item value:
+    </p>
+    <img src="reduceMethodtestscoresCode.png" alt="" />
+    <img src="reduceMethodTestScoresConsole.png" alt="" />
+    <p>And also with objects:</p>
+    <img src="reduceMethodObjectsCode.png" alt="" />
+    <img src="reduceMethodObjectsConsole.png" alt="" />
+  </body>
+</html>

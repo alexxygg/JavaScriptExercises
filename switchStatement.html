@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch Statement</title>
+    <script src="switchStatement.js"></script>
+  </head>
+  <body>
+    <h1>switch Statement</h1>
+    <p>It can replace multiple if statements.</p>
+    <p>
+      It is very important to have break; included after every case, otherwise,
+      the code will do what the first matching case says, but also all the
+      subsequent code, like a car without BREAKS!
+    </p>
+    <p>
+      Also, instead of an else statement, we use default: , which also goes
+      inside the curly brackets.
+    </p>
+    <p>
+      It works just like an else, so if the entry does not match any of our
+      cases, that is the action that will be performed.
+    </p>
+    <p>Here is an example made with if/else if/else:</p>
+    <img src="daysNoSwitchStatement.png" alt="" />
+    <p>Here is the same but made with a switch statement.</p>
+    <p>
+      We have a case for each number of day, and a default option in case none
+      of the cases are matched.
+      <img src="daysWithSwitchNoRepeat.png" alt="">
+      <p>We can also have multiple cases do the same thing.</p>
+      <p>Here, if we enter a day number between 1 and 5, it will be considered a weekday.(Weekdays in this case being from Monday to Friday)</p>
+      <p>And a weekend day for 6 and 7.(Saturday and Sunday)</p>
+      <p>Same default as before.</p>
+      <img src="daysWithSwitchANDRepeat.png" alt="">
+    </p>
+  </body>
+</html>

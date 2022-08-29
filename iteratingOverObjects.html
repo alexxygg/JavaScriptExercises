@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iterating over Objects</title>
+    <script src="iteratingOverObjects.js"></script>
+  </head>
+  <body>
+    <h1>Iterating over Objects</h1>
+    <p>for of loops are used all the time, but for in loops are rare.</p>
+    <p>
+      We can use the same for of loop syntax when working with objects, only
+      replacing of, for the word in, instead.
+    </p>
+    <p>
+      Since objects have keys and values, a simple for in loop will give us the
+      keys.
+    </p>
+    <img src="iteratingObjectKeys.png" alt="" />
+    <img src="iteratingObjectKeysConsole.png" alt="" />
+    <p>
+      To access the values of the object keys, we need to acknowledge a second
+      variable, which will automatically be assigned to the child of the key, in
+      this case being the values.
+    </p>
+    <img src="iteratingObjectValues.png" alt="" />
+    <img src="iteratingObjectValuesConsole.png" alt="" />
+    <p>We can then create strings with the information!</p>
+    <img src="exampleStringObjectIteration.png" alt="" />
+    <img src="exampleStringObjectIterationConsole.png" alt="" />
+    <h2>Other methods</h2>
+    <p>
+      We can also acces the keys and values with built in functions from JS.
+    </p>
+    <p>
+      The following will create an array of strings with the requested data.
+    </p>
+    <p>Object.keys(), Object.values() and Object.entries() will helps us.</p>
+    <p>Object.entries() will give us the pair, key and value!</p>
+    <p>
+      This one is a nested array, each pair is 2 strings, the pair is an array
+      inside the parent array.
+    </p>
+    <img src="objectIterationFunctions.png" alt="" />
+    <p>We can use what we know to get the average age of the object we made.</p>
+    <p>
+      We need to create a variable to store the sum of all ages, it should be
+      set to 0.
+    </p>
+    <p>
+      We need to obtain the values, we do this by creating a variable and making
+      it the array returned from Object.values(ages).
+    </p>
+    <p>
+      Now we have an array of only the values, which we can work with with a
+      regular for of loop.
+    </p>
+    <p>
+      By creating a for of loop, th let variable part will be accessing each
+      individual array item, in this case being the age of each person.
+    </p>
+    <p>
+      We can now have it perform an action for all array items, it will be to
+      sum each item from our array of values. It will do this until all items
+      have been summed.
+    </p>
+    <p>
+      Our variable for the sum of all ages, which was initially 0, should now be
+      accurate.
+    </p>
+    <p>
+      We can now console log the total ages variable divided by the number we
+      want. In case we do not know tha lenght, we can always use .lenght to
+      divide by the number of items in our array.
+    </p>
+    <p>
+      Notice that this does not work with objects, it works in this case case
+      because it is an array we created FROM an object.
+    </p>
+    <img src="agesAverageObjectIteration.png" alt="" />
+    <p>RESULTS IN 55.</p>
+    <p>Same but with testscores.</p>
+    <img src="testscoresAverageObjectIteration.png" alt="" />
+    <p>RESULTS IN 84.</p>
+  </body>
+</html>

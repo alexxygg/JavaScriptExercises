@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for of Loop</title>
+    <script src="forOfLoop.js"></script>
+  </head>
+  <body>
+    <h1>for of Loop</h1>
+    <p>
+      It makes it easier to iterate, no need for a variable i with a condition
+      and a mathemathical operation in the end.
+    </p>
+    <p>
+      It is most commonly used with arrays, but can be used with other types
+      too.
+    </p>
+    <p>
+      Each time we nest a for of loop inside another, we are accessing the child
+      of the parent, if we have a simple array, one for of loop will access each
+      array item.
+    </p>
+    <p>Example with regular for loop and for of loop.</p>
+    <img src="forOfLoop.png" alt="" />
+    <h2>Nested for of loop</h2>
+    <p>
+      If we have an array inside an array, our first for of loop will access
+      each individual child array, our second nested for of loop will access the
+      individual array items of our child arrays, with the parent array outside
+      them.
+    </p>
+    <p>Example with regular nested for loop and nested for of loop.</p>
+
+    <img src="forOfLoopNestedArray.png" alt="" />
+    <h2>Strings for of loop</h2>
+    <p>We can also use them with strings.</p>
+    <p>
+      Since the for of loop can be used with other iterable elements, it works
+      with strings.
+    </p>
+    <p>
+      Here we are accessing the children of the string, which would be
+      individual characters.
+    </p>
+    <img src="forOfLoopString.png" alt="" />
+    <p>So it will console log the characters one by one.</p>
+    <img src="forOfLoopStringConsole.png" alt="" />
+    <h2>Another example</h2>
+    <p>
+      Here we take an array, access each array item, and make a for of loop to
+      console log the squared version of the number.
+    </p>
+    <img src="anotherForOfExample.png" alt="" />
+  </body>
+</html>

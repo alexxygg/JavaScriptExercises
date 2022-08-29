@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Hell</title>
+  </head>
+  <body>
+    <h1>Callback Hell</h1>
+    <p>
+      When creating sequences, or having specific code run only after another
+      code has ran, we can get into callback hell.
+    </p>
+    <p>
+      This means we can end uo creating too many callbacks, the solution is
+      nesting!
+    </p>
+    <p>
+      The background color of our pages changes in the order of the colors of
+      the rainbow, one new color every second.
+    </p>
+    <p>We can create a setTimeout for every color:</p>
+
+    <img src="setTimeoutCallbackHell.png" alt="" />
+    <p>
+      Or we can create a function, and use it as an argument nested inside our
+      first function callback.
+    </p>
+    <img src="setTimeoutNestedFunctionsCode.png" alt="" />
+    <p></p>
+    <img src="setTimeoutNestedFunctions.png" alt="" />
+    <script src="callbackHell.js"></script>
+  </body>
+</html>

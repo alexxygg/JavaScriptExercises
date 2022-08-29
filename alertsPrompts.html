@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerts and Prompts</title>
+  </head>
+  <body>
+    <h1>Alerts and Prompts</h1>
+    <h2>console.log</h2>
+    <p>console.log helps us print in the console.</p>
+    <p>console.log("Hello, my name is Alex.")</p>
+    <p>RESULTS IN --> Hello, my name is Alex. (Visible in the console.)</p>
+    <h2>alert</h2>
+    <p>
+      It gives a popup to the user, a message they can see on their screen, not
+      in the console.
+    </p>
+    <p>alert("Hello, my name is Alex.")</p>
+    <p>RESULTS IN --></p>
+    <img src="alert.png" alt="" />
+    <h2>prompt</h2>
+    <p>Also a popup, but with a box for the user to enter an input.</p>
+    <p>prompt("Enter a number between 1 and 100!");</p>
+    <p>RESULTS IN --></p>
+    <img src="prompt.png" alt="" />
+    <p>
+      We can create a variable to save the user input and retrieve it when
+      needed.
+    </p>
+    <p>Here is the variable we would make:</p>
+    <p>let userInput = prompt("Enter a number between 1 and 100!");</p>
+    <p>Let´s say we chose number 7.</p>
+    <p>userInput;</p>
+    <p>RESULTS IN --> 7</p>
+    <hr />
+    <p>
+      If we were trying to do any math with the user input, we would first have
+      to convert the string to a number.
+    </p>
+    <p>We can´t just add 1 for example to the userInput:</p>
+    userInput + 1;
+    <p>"71"</p>
+    <p>We would do this with parseInt().</p>
+    <p>parseInt(userInput);</p>
+    <p>Now we have a number instead of a string to work with.</p>
+    <p>
+      If the user´s input has letters or other characters other than numbers, it
+      will try to retrieve only the numbers.
+    </p>
+    <p>So NOW we can add 1 if wanted:</p>
+    <p>parseInt(userInput) + 1;</p>
+    <p>RESULTS IN --> 8</p>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block scope</title>
+    <script src="blockScope.js"></script>
+  </head>
+  <body>
+    <h1>Block scope</h1>
+    <p>
+      A block is what's inside the curlt braces of things like conditionals
+      statements, loops, etc. Scope in a block works differently than with a
+      function.
+    </p>
+    <p>
+      We can not access any variable declared in a block, unless we are calling
+      it from inside the block. if we try, we will get an error saying that the
+      variable is not defined.
+    </p>
+    <p>We can still access universal variables, which are outside blocks.</p>
+    <img src="noVarOrConstScope.png" alt="" />
+    <h2>var</h2>
+    <p>
+      If we declare our variables with var instead of let or const, we actually
+      have scope even outside the blocks where they were declared!
+    </p>
+    <p>
+      let and const block scopes them from anywhere, even after they have been
+      used we can see their values!
+    </p>
+    <img src="varOrConstScope.png" alt="" />
+  </body>
+</html>

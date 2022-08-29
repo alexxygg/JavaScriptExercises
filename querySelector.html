@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelector</title>
+  </head>
+  <body>
+    <h1>querySelector</h1>
+    <p>This helps us access and select Ids, tag names and class names.</p>
+    <p>We will be returned the first match of what we request.</p>
+    <p>We must use the CSS syntax:</p>
+    <ul>
+      <li>("#id")</li>
+      <li>("tagName")</li>
+      <li>(".class")</li>
+    </ul>
+    <p>We can also access other matches by using ("img:nth-of-type(3)")</p>
+    <p>*Example for 4th image match.</p>
+    <hr />
+    <p>Here we have an example.</p>
+    <p>Picture 1 has a class of "sky".</p>
+    <p>Picture 3 and 5 have a class of "landscape".</p>
+    <p>Picture 4 has an id of "airplane"</p>
+    <p>We have 7 p elements and 6 img elements.</p>
+    <img src="practiceWebsiteQuerySelectorpt1.png" alt="" />
+    <img src="practiceWebsiteQuerySelectorpt2.png" alt="" />
+    <p>We can access specific ids, elements and classes:</p>
+    <img src="querySelector.png" alt="" />
+    <p>NTH OF TYPE USED FOR ELEMENTS, NOT IDS OR CLASSES.</p>
+    <p>WE WILL GET THE FIRST MATCH FOUND.</p>
+    <hr />
+    <p>We can also access an element by its attribute.</p>
+    <p>Here we have a link, its title is Google.</p>
+    <img src="linkQuerySelector.png" alt="" />
+    <img src="linkQuerySelectorConsole.png" alt="" />
+    <h2>querySelectorAll</h2>
+    <p>It returns a collection of matches, instead of the first match.</p>
+    <p>
+      It will do so in the common Array-like collection of JS objects we've seen
+      before!
+    </p>
+    <img src="querySelectorAll.png" alt="" />
+    <hr />
+    <p>We can also look for nested elements, with the descendant selector.</p>
+    <p>The syntax is simply a space between the parent and child element.</p>
+    <p>
+      We are on the same webpage as before, there are a total of 10 h2 headings.
+    </p>
+    <p>But only 3 h2 headings are nested inside an unorganized list.</p>
+    <img src="nestedQuerySelectorAllCode.png" alt="" />
+    <img src="nestedQuerySelectorAllConsole.png" alt="" />
+    <p>
+      We can hover over the object from the collection we are returned to see
+      where exactly on the page it is!
+    </p>
+    <p>
+      We can also iterate over the returned collection by saving it to a
+      variable.
+    </p>
+    <p>We can access a specific element type like this:</p>
+    <p>const checkbox = document.querySelector("input[type=checkbox]")</p>
+  </body>
+</html>

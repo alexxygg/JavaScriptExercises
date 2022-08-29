@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerText, textContent & innerHTML</title>
+  </head>
+  <body>
+    <h1>innerText, textContent & innerHTML</h1>
+    <h2>innerText</h2>
+    <p>We can retieve values like with any other object.</p>
+    <p>Here we update a paragraph.</p>
+    <p>LOOKED LIKE THIS --></p>
+    <img src="innerText.png" alt="" /><img
+      src="innerTextManipulation.png"
+      alt=""
+    />
+    <p>NOW LOOKS LIKE THIS --></p>
+    <img src="innerTextResult.png" alt="" />
+    <p>Any bold tags, anchors etc. would be removed by doing this.</p>
+    <h2>textContent</h2>
+    <p>Every piece of content inside an element will show with .textContent.</p>
+    <p>All markup will show, even hidden things.</p>
+    <p>
+      They can both help us modify content, but textCOntent shows the markup
+      style we used.
+    </p>
+    <img src="textContent.png" alt="" /><img
+      src="textContentConsole.png"
+      alt=""
+    />
+    <h2>innerHTML</h2>
+    <p>
+      Here we can actually see every single thing inside our paragraph,
+      including in this case an anchor link, bold text and a break. ALL TAGS.
+    </p>
+    <p>It is useful when updating our content.</p>
+    <img src="textContent.png" alt="" /><img
+      <img
+      src="innerHTMLManipulation.png"
+      alt=""
+    />
+    <p>RESULTS IN --></p>
+    <img src="innerHTMLResult.png" alt="" />
+    <hr />
+    <p>
+      We wouldn't be able to change our content to be italics with innerText,
+      but innerHTML treats it as actual markup.
+    </p>
+    <img src="innerTextvsinnerHTMLCode.png" alt="" />
+    <p>innerText RESULTS IN --></p>
+    <img src="innerTextvsinnerHTMLtext.png" alt="" />
+    <p>innerHTML RESULTS IN --></p>
+    <img src="innerTextvsinnerHTMLhtml.png" alt="" />
+    <hr />
+    <p>
+      We can also use += to add to our content instead of just replacing it.
+    </p>
+    <img src="plusEqualsInnerHTML.png" alt="" />
+    <p>RESULTS IN --></p>
+    <img src="plusEqualsInnerHTMLResult.png" alt="" />
+    <h2>Another nested example.</h2>
+    <img src="textContent.png" alt="" /><img
+    <p>
+      We have a span surrounding all text after the bolded text of our
+      paragraph. (Not visible on the webpage.)
+    </p>
+    <img src="exampleNestedElementManipulation.png" alt="" />
+    <p>RESULTS IN --></p>
+    <img src="exampleNestedElementManipulationResult.png" alt="" />
+  </body>
+</html>

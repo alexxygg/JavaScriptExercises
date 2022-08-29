@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>And More Array Methods</title>
+    <script src="andMoreArrayMethods.js"></script>
+  </head>
+  <body>
+    <h1>And More Array Methods</h1>
+    <h2>.slice()</h2>
+    <p>This method helps us grab a slice of an array, or slice it.</p>
+    <p>It takes a starting point and an ending point which is optional.</p>
+    <p>
+      The starting point alone will include the inde we enter and go all the way
+      to the end of the array.
+    </p>
+    <p>
+      Entering both a starting and ending point is different, the ending point
+      index will not be included in our returning sliced array!
+    </p>
+    <p>
+      If we do not pass any points, (leave it blank), it will create a copy of
+      the array.
+    </p>
+    <p>
+      Whatever we slice will not affect the original array, it will be
+      unchanged.
+    </p>
+    <p>
+      We can even enter a negative index, it would return that number starting
+      from the end of the array, in a reverse order.
+    </p>
+    <img src="sliceArrayMethod.png" alt="" />
+    <h2>.splice()</h2>
+    <p>
+      The splice method helps us do many things, this method is destructive, so
+      it will actually change the array we are workking with.
+    </p>
+    <h3>Deleting items</h3>
+    <p>First we will use it to delete an array index.</p>
+    <p>
+      We will need the starting index, which would be the index of the item we
+      want to delete. And the number of items we are deleting.
+    </p>
+    <p>
+      Here is an example of deleting 1 item, 3 items and starting at one index
+      all the way to the end.
+    </p>
+    <img src="spliceArrayMethodDelete1.png" alt="" />
+    <img src="spliceArrayMethodDelete3.png" alt="" />
+    <img src="spliceArrayMethodDelete.png" alt="" />
+    <h3>Adding items</h3>
+    <p>
+      We can also add items to our array as needed, it uses the same syntax, but
+      we need to include the item as an argument in our .splice() method.
+    </p>
+    <p>
+      Here we add one item, first we enter the index where we want our new item
+      to be, specifying that we do not want to delete any items (The 0). And
+      then our array item.
+    </p>
+    <img src="spliceAddNoDelete.png" alt="" />
+    <p>But we can also add multiple items at the same time.</p>
+    <img src="spliceAddMultipleNoDelete.png" alt="" />
+    <p>Or delete multiple and add one.</p>
+    <img src="spliceDeleteMultipleAddOne.png" alt="" />
+
+    <h2>.sort()</h2>
+    <p>This one helps us sort items in an array.</p>
+    <p>
+      By default it does not really sort say an array of numbers, we can use
+      functions for this.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truth and Falsy values</title>
+    <script src="truthyFalsy.js"></script>
+  </head>
+  <body>
+    <h1>Truth and Falsy values</h1>
+    <p>We have true and false, but we also have truthy and falsy values.</p>
+    <p>They are an inheritance they natrally have from JS.</p>
+    <p>ALL JS values are truthy... with the exception of:</p>
+    <ul>
+      <li>false</li>
+      <li>0</li>
+      <li>" " (empty string)</li>
+      <li>null</li>
+      <li>undefined</li>
+      <li>NaN</li>
+    </ul>
+    <p>
+      Here we made a prompt for the user, if the user leaves it blank and
+      presses enter it would be an empty string.
+    </p>
+    <p>
+      The if conditional below means that if userInput is true, display a
+      message saying truthy, otherwisse, one saying it is falsy.
+    </p>
+    <img src="emptyStringTruthyFalsy.png" alt="" />
+    <p>
+      We are checking for either an input, or an empty string, but we can check
+      for all other types of falsy values.
+    </p>
+    <p>
+      These will also result in a message saying it is falsy, but if we enter
+      any other word or number, including negative ones, they would be truthy!
+    </p>
+    <img src="otherTruthyFalsyValues.png" alt="" />
+  </body>
+</html>
