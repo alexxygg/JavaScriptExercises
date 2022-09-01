@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+  </head>
+  <body>
+    <h1>AJAX</h1>
+    <h2>Asynchronous JavaScript And XML</h2>
+    <p>
+      When we are loading new posts on a social media, we don't need to go to
+      another webpage, we simply get an infinite scroll type of system.
+    </p>
+    <p>There's no need to click or move from the site.</p>
+    <p>
+      Autocompletion and suggestions work the same way, the matches are provided
+      by the page´s server, and requested by the page itself based on the user's
+      input.
+    </p>
+    <p>
+      We can fetch all sort of data behind the scenes, all while on the same
+      page. Just the bits we need, nothing more, nothing less.
+    </p>
+    <p>We don't get HTML, CSS or JavaScript, just the data we ask for.</p>
+    <h2>API's</h2>
+    <p>Web API's are web based.</p>
+    <p>
+      It is like a portal to another database or software, a way for them to
+      communicate between each other.
+    </p>
+    <p>
+      An endpoint is the place where we send the request to, it not a website
+      but JSON. What we are returned is not for a user, it is a way to return
+      and have our code understand the values we ask for.
+    </p>
+    <p>Many have a cost, others are free.</p>
+    <ul>
+      <li>Weather data (current,forecasts,etc.)</li>
+      <li>Stock market prices</li>
+      <li>
+        Twitter (Search tweets, post tweets bot, auto-responses to DMs/Post
+        mentions)
+      </li>
+      <li>Facebook, Instagram (Similar to above)</li>
+      <li>
+        Twilio (Send text messages, whatsapp chat auto-responding, appointment
+        reminders,etc.)
+      </li>
+    </ul>
+    <p>
+      So sometimes it's not just to fetch data, but to create bots and display
+      information.
+    </p>
+    <p>These API requests and responses work through HTTP requests.</p>
+    <p>The format they use is pure data, no events, markup, etc.</p>
+    <p>
+      The most popular was XML, but they aren't required anymore. It is far less
+      common now.
+    </p>
+    <p>Which is why we may see AJAJ instead, which replaces XML with JSON.</p>
+    <h2>JSON</h2>
+    <h3>Java Script Object Notation</h3>
+    <p>
+      It is a format to send information, between browsers, API's, in a
+      predictable and simple way.
+    </p>
+    <h3>Syntax</h3>
+    <p>It works like JS objects, but with quotes between the key name.</p>
+    <p>
+      No undefined, since it would convert it to a string as it doesn't
+      recognize it as a type. It becomes invalid JSON if we check with a JSON
+      validator.
+    </p>
+    <p>
+      There is a built-in method that converts JSON to JS objects, since what we
+      are returned are strings.
+    </p>
+    <p>
+      We can then save the object to a variable and access its keys and values:
+    </p>
+    <p>JSON.parse(string{})</p>
+    <p>We can also do the opposite:</p>
+    <p>JSON.stringify(object)</p>
+    <h2>Postman</h2>
+    <h2>HTTP Verbs</h2>
+    <p>
+      These are the different options when creating a request, like get for
+      example.
+    </p>
+    <p>
+      Some APIs only support a certain type of request, o our retrieve of
+      information won't work if we don't follow the APIs documentation.
+    </p>
+    <p>They do different things and they depend on the APIs structure.</p>
+    <h2>HTTP Status Codes</h2>
+    <p>
+      These are the codes that return from an HTTP response, each has a meaning.
+    </p>
+    <p>
+      200 is the most common, it means the request succeeded. The ones that
+      start with 2 mean success.
+    </p>
+    <p>
+      The ones that start with 3 mean something went wrong with the redirection
+      of the request.
+    </p>
+    <p>
+      The ones that start with 4 mean something went wrong on the client side,
+      or by the user, like 404 Not found.
+    </p>
+    <p>
+      The ones that start with 5 mean something went wrong on the server side.
+    </p>
+  </body>
+</html>

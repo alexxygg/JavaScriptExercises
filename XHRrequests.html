@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating XHR Requests</title>
+  </head>
+  <body>
+    <h1>Creating XHR Requests</h1>
+    <p>We will be seeing 3 ways to make requests:</p>
+    <h3>XMLHttpRequest/XHRs, fetch() and Axios Requests library</h3>
+    <h2>XMLHttpRequest/XHRs</h2>
+    <p>This is the original version of sending requests via JS.</p>
+    <p>PROMISES ARE NOT SUPPORTED(MANY CALLBACKS, MUCH NESTING)</p>
+    <p>Capitalization needs attention.</p>
+    <p>Syntax is more difficult to remember.</p>
+    <p>Here is an example:</p>
+    <img src="XMLHrequest.png" alt="" />
+    <p>RESULTS IN --></p>
+    <img src="XMLHrequestConsole.png" alt="" />
+    <h2>fetch()</h2>
+    <p>A newer way to make requests, which DOES support promises.</p>
+    <img src="fetchComments.png" alt="" />
+    <p>WITHOUT COMMENTS --></p>
+    <img src="fetchNoComments.png" alt="" />
+    <p>
+      We can also pass our code to an async function for better readability.
+    </p>
+    <p>The try and catch is used instead of then and catch.</p>
+    <p>
+      Here we only are getting the converted object back, not the initial
+      unreadable object.
+    </p>
+    <img src="asyncStarWarsRequest.png" alt="" />
+    <h2>Axios Requests library</h2>
+    <p>This is a library for our requests.</p>
+    <p>
+      It uses fetch behind the scenes, but not natively in JS, it must be
+      imported.
+    </p>
+    <p>
+      We can install it, or just reference it inside a script tag to our HTML
+      document.
+    </p>
+    <p>
+      Here is an example, including the same promises but in an async function
+      below.
+    </p>
+    <img src="axiosLibraryRequests.png" alt="" />
+    <h2>HTTP Headers with Axios</h2>
+    <p>
+      Here is an example of an API that needs Accept to be a specific HTTP
+      Header:
+    </p>
+    <img src="axiosHTTPheader.png" alt="" />
+    <hr />
+    <h2>Example of Random Dad Joke with button:</h2>
+    <p>
+      Here we combine DOM manipulation with the API to show something on the
+      user's screen when pressing the button.
+    </p>
+    <h3>Click the button for a random joke!</h3>
+    <ul></ul>
+    <button>Click Me! :D</button>
+    <hr />
+    <p>CODE --></p>
+    <img src="axiosJokeButton.png" alt="" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="XHRrequests.js"></script>
+  </body>
+</html>

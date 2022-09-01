@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Terminal</title>
+  </head>
+  <body>
+    <h1>The Terminal</h1>
+    <p>
+      We can interact with our computer through the terminal instead of the GUI.
+    </p>
+    <p>Why it matters:</p>
+    <p>Speed, it can be much faster than the GUI.(NO CLICKING,DRAGGING,ETC.)</p>
+    <p>
+      Access, we get access to areas we normally can't interact with or are
+      hidden from us.
+    </p>
+    <p>
+      Tools, many of them are installed through the terminal, not much choice.
+    </p>
+    <hr />
+    <h2>Terminology</h2>
+    <p>
+      The terminal is a text-based interface to our computer. (The actual
+      application.)
+    </p>
+    <p>It was originally a physical object, now a software.</p>
+    <p>
+      A shell is the program running on the terminal. (An ATM is the terminal,
+      and the software each bank uses is each shell.)
+    </p>
+    <p>
+      Bash is a popular shell, the default on Mac in the past. We can change
+      between shells on our terminals.
+    </p>
+    <hr />
+    <h2>Commands</h2>
+    <h3>ls , list</h3>
+    <p>
+      We are in the default directory when we open a new terminal, it is our
+      Home (~ is the shortcut.).
+    </p>
+    <p>
+      With ls, we can list all the directories and/or files in our current
+      location.
+    </p>
+    <h3>pwd (Print Working directory)</h3>
+    <p>It tells us exactly where we are in our files.</p>
+    <h3>cd (change directory)</h3>
+    <p>We use this command to move into or back out to a folder/file.</p>
+    <p>We need to specify where we are trying to go with a path.</p>
+    <p>Tab will auto-complete our path if it matches anything.</p>
+    <p>cd.. will take us backwards one step.</p>
+
+    <h3>Absolute vs Relative paths</h3>
+    <p></p>
+    <p>
+      With a relative path, we can only access a specified path moving into or
+      forward if the file is available relative to where we currently are.
+    </p>
+    <ul>
+      <li>
+        If dogs has a file inside it called germanShepard, we can only access it
+        if we are ALREADY inside the dogs folder.
+      </li>
+    </ul>
+    <p>With an absolute path, we can go anywhere else, also moving forward.</p>
+    <p>If we are outside dogs, we can specify an absolute path.</p>
+    <ul>
+      <li>If we are in animals, we can access germanShepard with:</li>
+      <li>cd /dogs/germanShepard</li>
+    </ul>
+    <h3>mkdir (make directory)</h3>
+    <p>It will create a new folder wherever we are in the file path.</p>
+    <p>
+      The name of the folder is followed by the command, just separated by a
+      space.
+    </p>
+    <p>
+      If there is a folder with the same name as the one we are trying to
+      create, we will be told so.
+    </p>
+    <p>It can be combined with .. and ../.. , etc.</p>
+    <h3>man (Manual)</h3>
+    <p>It provides information about the different commands.</p>
+    <h3>Flags</h3>
+    <p>
+      They are options and parameters to specify how we want the command to run,
+      what info to display, the order,etc.
+    </p>
+    <p>They start with a dash.</p>
+    <ul>
+      Examples:
+      <li>
+        ls -a shows us all entries, including hidden filles which begin with a
+        dot/period.
+      </li>
+      <li>-l gives more details.</li>
+      <li>-la does both things (THEY CAN BE COMBINED!)</li>
+      <li>
+        mkdir -v tells us what was created, instead of doing it silently like
+        normal.
+      </li>
+    </ul>
+    <p>We can exit by typing q.</p>
+    <h3>touch</h3>
+    <p>
+      It helps us create a file, in contrast to mkdir, which creates a folder or
+      directory.
+    </p>
+    <p>
+      It's primary use is making a new file, but it is originally to change file
+      access or modification times (Last modified update).
+    </p>
+    <p>If we use touch on an existing file it will do just that.</p>
+    <p>We can specify the type of file, for example:</p>
+    <ul>
+      <li>touch newDoc.html</li>
+      <li>touch newDoc.html</li>
+      <li>touch newDoc.html</li>
+      <li>(OR --> touch newDoc.html newDoc.html newDoc.html)</li>
+      <li>man touch (opens the manual for the touch command :D)</li>
+    </ul>
+    <h3>Tips</h3>
+    <p>We can clear the terminal with clear or Ctrl L on Linux.</p>
+    <p>cd .. takes us one directory back.</p>
+    <p>cd ../.. takes us two directories back.</p>
+    <p>
+      cd ../../something takes us to a directory 2 levels outside, but inside
+      that particular level.
+    </p>
+    <p>cd ~ takes us home from wherever we are.</p>
+  </body>
+</html>

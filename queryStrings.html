@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Query Strings</title>
+  </head>
+  <body>
+    <h1>Query Strings</h1>
+    <p>
+      We may see endpoints with classes on API documentation that are used to
+      specify the id that we are requesting, which is to be replaced by us.
+    </p>
+    <p>Query Strings show on our address bars and have the following syntax:</p>
+    <p>?sort=desc&color=blue</p>
+    <p>They are key value pairs separated by ampersand characters.</p>
+    <p>
+      This address tells us that the value of sort is desc AND also that the
+      value of color is blue.
+    </p>
+    <p>
+      We can append anything to our strings when making a request, anything that
+      we add to it that the API database doesn't recognize will simply be
+      ignored.
+    </p>
+    <p>Example:</p>
+    <p>
+      https://swapi.dev/api/starships/10/?color=blue&details=true&random=yes
+    </p>
+    <p>Only https://swapi.dev/api/starships/10/ will be used.</p>
+    <p>It won't look for the rest, it doesn't care.</p>
+    <hr />
+    <p>
+      Some APIs will only accept requests made with their specific query
+      selectors, and will otherwise not work.
+    </p>
+    <p>
+      We can instead enter query parameters if we don't want to enter the url
+      manually with all the specifications. We can also toggle the parameters
+      this way.
+    </p>
+    <h2>HTTP Headers</h2>
+    <p>They allow us to pass key value pairs, small add-ons for our request.</p>
+
+    <p>
+      It is information returned by the server regarding the request, some APIs
+      require headers.
+    </p>
+    <p>
+      The documentation lets us know of the specifications we must fill for the
+      key value pairs, if it is needed.
+    </p>
+  </body>
+</html>
