@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>node JS</title>
+  </head>
+  <body>
+    <h1>node JS</h1>
+    <p>It is a JS runtime,</p>
+    <p>
+      Its a JS implementation we can run outside our browser, which allows us to
+      do many things.
+    </p>
+    <p>We use the same syntax as vanilla JS.</p>
+    <p>
+      The first server side implementation was created 13 years before node.js
+    </p>
+    <p>It is the most popular of any available JS.</p>
+    <h3>Uses</h3>
+    <p>We can create applications.</p>
+    <p>We can create web servers.</p>
+    <p>We can create command line tools. (In the terminal).</p>
+    <p>
+      We can create native applications. (Like VS Code and Slack through
+      Electron).
+    </p>
+    <p>We can create games.</p>
+    <p>We can create drone software.</p>
+    <ul>
+      <li>Netflix, Uber, even NASA uses node.js</li>
+    </ul>
+    <hr />
+    <h2>REPL (Read, Evaluate, Print, Execute)</h2>
+    <p>
+      The Node.js REPL is basically the JavaScript console running in our
+      terminal, we can use any JS code we want.
+    </p>
+    <p>
+      It is used to debug, play around and test things, it works like a sandbox
+      just waiting for our input to evaluate and run it.
+    </p>
+    <p>
+      .help gives us some tips for commands, not accessible in the regular JS
+      console.
+    </p>
+    <p>Ctrl + D will also exit node.</p>
+    <p>
+      The window or global top level object isn't available in node. Instead,
+      global gets us to the window.
+    </p>
+    <p>Neither is DOM manipulation, since Document isn't available either.</p>
+    <h2>Running node files</h2>
+    <p>
+      We don't use node.js to write our code, just like we wouldn't use the web
+      console either.
+    </p>
+    <p>
+      Once we have a js file, we must cd into the folder where our file is
+      located.
+    </p>
+    <p>
+      (IF NOT IN THE FOLDER WHERE OUR FILE IS, WE MUST SPECIFY THE RELATIVE PATH
+      WHERE THE FILE IS TO RUN SUCCESSFULLY.)
+    </p>
+    <p>We can then run : node file.js.</p>
+    <p>
+      This will execute the code inside our js file without the need to sync it
+      to an HTML file.
+    </p>
+    <img src="runningNodeJsCode.png" alt="" />
+    <p></p>
+    <img src="runningNodeJsTerminal.png" alt="" />
+    <p>
+      SO node WILL OPEN THE REPL/CONSOLE AND node file.js WILL RUN THE FILE
+      INSIDE THE TERMINAL.
+    </p>
+    <hr />
+    <h2>process.argv</h2>
+    <p>
+      This built-in node method will return the first 2 paths of where the node
+      file is.
+    </p>
+    <p>
+      We can eliminate the first 2 strings returned and add our own arguments,
+      her we use this with a for of loop.
+    </p>
+    <img src="processArgv.png" alt="" />
+    <img src="processArgvResult.png" alt="" />
+  </body>
+</html>

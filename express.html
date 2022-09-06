@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express JS</title>
+  </head>
+  <body>
+    <h1>Express JS</h1>
+    <p>
+      It helps with the requests made from the user. It checks and saves things
+      into our database, and then executes our response.
+    </p>
+    <p>It:</p>
+    <p>It starts up a server to listen for requests.</p>
+    <p>Parse incoming requests.</p>
+    <p>Match those requests to a certain route.</p>
+    <p>
+      It is an NPM package that comes with methods and optional plugins we can
+      use to build web applications and API's.
+    </p>
+    <h3>Libraries and frameworks</h3>
+    <p>
+      The difference is that a library can be integrated to our code, and we
+      decide when to use it. A framework typically switch the control, it
+      provides the structure, and we only participate with our code.
+    </p>
+    <p>There's less freedom and flexibility with frameworks.</p>
+    <p>Express is a framework, lightweight and right in the middle.</p>
+    <p>
+      Some of them require us to give up a lot of control, as far as how we name
+      our files, etc.
+    </p>
+    <hr />
+    <h2>Starting our server</h2>
+    <p>We must import express first.</p>
+    <p>
+      Then save it to a variable, and make another variable for the executed
+      function itself.
+    </p>
+    <p>
+      Finally we can use listen() to start the server, this is where we include
+      our port number.
+    </p>
+    <img src="expressRunServer.png" alt="" />
+    <hr />
+    <h2>The request and response Objects</h2>
+    <p>
+      When a user makes a request to our server, we will automatically get an
+      object with all the request information.
+    </p>
+    <p>Example:</p>
+    <p>
+      If user requests 3000/dogs, the object will have a key for our path and a
+      value of /dogs.
+    </p>
+    <p>
+      When we use an API that requires a header, it will show on a key called
+      headers and show the value.
+    </p>
+    <hr />
+    <p>We can call this argument object res or request for clarity.</p>
+    <p>
+      Now we can use a method called req.send() to return something to the user
+      each time we receive a request.
+    </p>
+    <p>
+      We can use an API tool to see the response when entering our server's
+      address and using GET.
+    </p>
+    <p>Using an API tool will also log a request to our server.</p>
+    <p>We can return strings, HTML tagged content, objects, etc in quotes.</p>
+    <img src="expressUseAndSend.png" alt="" />
+    <hr />
+    <h2>Routing</h2>
+    <p>This is how we use different responses to different requests.</p>
+    <p>We match a code as a response based on the specific request.</p>
+    <h3>app.get()</h3>
+    <p>
+      This method takes 2 arguments, a path request and a function where we use
+      our request and response objects.
+    </p>
+    <p>
+      We can assign each of our websites to one of these methods, to match the
+      request with the relevant path.
+    </p>
+    <p>
+      (WE WON'T GET ANYTHING THROUGH AN API TOOL IF WE TRY WITH POST INSTEAD OF
+      GET, UNLESS WE ASSIGN A RESPONSE TO app.post(). THIS WILL BE DIFFERENT
+      THAN GET, EACH TYPE OF REQUEST WILL WORK INDEPENDENTLY FROM THE OTHERS. IF
+      NOTHING IS ASSIGNED TO A PARTICULAR TYPE OF REQUEST, THE USER WILL SIMPLY
+      GET AN ERROR.)
+    </p>
+    <p>There are many types of requests like post, put, delete, etc.</p>
+    <p>
+      We can set a default response if nothing matches the user's request with
+      the star symbol:
+    </p>
+    <p>
+      app.get( "*", (request, response) => `WE COULDN'T FIND WHAT YOU WERE
+      LOOKING FOR :(` );
+    </p>
+    <p>
+      *WE MUST MAKE SURE TO PUT THIS CODE AFTER ALL OTHER REQUESTS, SINCE WE CAN
+      ONLY RETURN 1 RESPONSE AT A TIME, AND SINCE THIS CATCHES ALL REQUESTS, IT
+      WOULD RETURN EVERY TIME!
+    </p>
+    <img src="expressExampleResponses.png" alt="" />
+  </body>
+</html>

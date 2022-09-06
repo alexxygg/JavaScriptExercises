@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module exports</title>
+  </head>
+  <body>
+    <h1>Module exports</h1>
+    <p>
+      When working with node js, we can call another js document and reference
+      it on our new js document.
+    </p>
+    <p>
+      The only thing that will be imported is what we explicitly exported in the
+      original js file we are referencing.
+    </p>
+    <p>This is done with module.exports</p>
+    <p>
+      The default is an object, but if we were to set the export to a string or
+      a number, that would be all we would have access to from our new js file.
+    </p>
+    <hr />
+    <h2>Example</h2>
+    <h3>Code we are exporting:</h3>
+    <p>
+      ***We must return what we expect if using curly brackets for our
+      functions, unless it is a one-liner.
+    </p>
+    <img src="modulesFunctions.png" alt="" />
+    <hr />
+    <p>Examples:(EXPORTING from desired file)</p>
+
+    <img src="moduleExport.png" alt="" />
+    <p>Shorthand</p>
+    <p>
+      (WE HAVE TO MAKE SURE EXPORTS'S VALUE DOESN'T CHANGE, AS IT WOULD AFFECT
+      THE EXPORT)
+    </p>
+    <img src="moduleExportShorthand.png" alt="" />
+    <hr />
+    <p>Examples:(IMPORTING to desired file)</p>
+    <img src="modulesImportFromFile.png" alt="" />
+    <p>
+      If the path is not local, we must specify exactly where our referenced
+      file is located.
+    </p>
+    <hr />
+    <p>We can also import from an object we create:</p>
+    <img src="moduleExportObject.png" alt="" />
+    <p></p>
+    <img src="modulesImportFromObject.png" alt="" />
+    <hr />
+    <p>Or even call only specific functions:</p>
+    <p>
+      We can call them without the math constant name, since it has been
+      removed.
+    </p>
+    <img src="moduleImportingOnlySpecificFunctions.png" alt="" />
+    <hr />
+    <p>And we can even export at the time we declare a function or variable:</p>
+    <img src="modulesExportOnDeclaration.png" alt="" />
+  </body>
+</html>

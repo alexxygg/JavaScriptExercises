@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NPM Library</title>
+  </head>
+  <body>
+    <h1>NPM Library</h1>
+    <h2>Node Package Manager</h2>
+    <p>We can work with packages others have created through npm library.</p>
+    <p>It is also a command line tool to install and manage those packages.</p>
+    <h2>Installing packages</h2>
+    <p>We run npm install followed by the node package in our terminal.</p>
+    <p>We must make sure we copy the name of the package correctly.</p>
+    <p>We will get all of its dependencies in a folder called node_modules.</p>
+    <p>It shouldn't be removed. Neither should package-lock.json</p>
+    <p>
+      We can then require or import the document, which will have the same name
+      as the name of the package we see on npm.
+    </p>
+    <p>
+      On the package's documentation, we will see the options we have, we can
+      copy one of the functions and paste it on our index.js file.
+    </p>
+    <p>
+      We can now run it with node in the terminal, making sure we are inside the
+      path where our file is located.
+    </p>
+    <img src="importPacakageNPM.png" alt="" />
+    <p>THIS WILL INSTALL TO THE LOCAL FOLDER, WHEREVER WE ARE AT.</p>
+    <h2>Global packages</h2>
+    <p>
+      Sometimes we may want to access our package from anywhere we are. We can
+      do this with global packages.
+    </p>
+    <p></p>
+    <h2>JSON (JavaScript Object Notation)</h2>
+    <p>Every package we install will have a file called package.json.</p>
+
+    <p>It contains data about the module or package we're working with.</p>
+    <p>
+      It includes its dependencies, and some of them have their own dependencies
+      along with their version, sometimes only approximately correct.
+    </p>
+    <p>We can create one ourselves by running npm init.</p>
+    <p>
+      It will guide us through the process thanks to its built-in walk-trough.
+    </p>
+    <p>We will now have a file called package.json inside our folder.</p>
+
+    <p>
+      Each new package we install in the same folder will now show up as a
+      dependency in the package.json object.
+    </p>
+    <p>
+      Its not necessary for the dependency to be there, but it keeps a record of
+      everything, and saves it in a shared place.
+    </p>
+    <hr />
+    <h2>Installing all dependencies</h2>
+    <p>
+      We don't tend to include the node_modules file when uploading to git and
+      github. It is common to be this way.
+    </p>
+    <p>This file contains all dependencies.</p>
+    <p>We can look in the package.json file and do it manually...</p>
+    <p>We can install them by running npm install.</p>
+    <p>This will automatically do the process for us.</p>
+    <p>
+      We should remove useless dependencies from our package.json, that way
+      anyone running this command doesn't download dependencies that are not
+      needed or necessary.
+    </p>
+  </body>
+</html>
