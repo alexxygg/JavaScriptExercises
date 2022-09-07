@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static assets in Express.js</title>
+  </head>
+  <body>
+    <h1>Static assets in Express.js</h1>
+    <p>This refers to CSS and JS scripts that run in the browser.</p>
+    <p>
+      We need to serve the stylesheets and JS scripts, fonts, images, logos,
+      etc.
+    </p>
+    <p>We can do this with express.js!</p>
+    <p>app.use(), as we've used before, will run every time.</p>
+    <p>We use this method with express.static() inside it.</p>
+    <p>We must pass the folder where our files are to this second method.</p>
+    <p>
+      (We can have multiple folders for each type of file, like one for js and
+      one for css, but it is common to have them grouped in a single folder.)
+    </p>
+    <p>
+      Now we can link our stylesheet in our EJS file, no need for the folder to
+      be included, only the file name.
+    </p>
+    <p>This will apply to every webpage that generates.</p>
+    <p>
+      In this example we use a folder called public, which inside has our
+      app.css stylesheet file!
+    </p>
+    <img src="staticAssetsStyesheetExpress.png" alt="" />
+    <p>
+      We can also use the __dirname method to be able to run our server from
+      anywhere we are in the file system if using the relative file path.
+    </p>
+    <img src="staticAssetsCodeExpress.png" alt="" />
+  </body>
+</html>
