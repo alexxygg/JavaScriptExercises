@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get vs POst Requests</title>
+  </head>
+  <body>
+    <h1>GET vs POST Requests</h1>
+    <h3>GET</h3>
+    <p>This is the default request type, it helps us:</p>
+    <p>Retrieve information</p>
+    <p>Data sent via query string</p>
+    <p>Information is visible in the URL.</p>
+    <p>Limited amount of data can be sent.</p>
+    <h3>POST</h3>
+    <p>Used to post data to the server.</p>
+    <p>We can write/create/update</p>
+    <p>
+      We can include a body, like a JS or JSON object, plain text, HTML. We do
+      this instead of using a query string.
+    </p>
+    <p>
+      We can send any sort of data. We can directly interact with a server,
+      unlike GET which doesn't update/make changes, delete or create new
+      content.
+    </p>
+    <p>There's more flexibility overall.</p>
+    <h2>Defining Express post routes.</h2>
+    <p>
+      WHen we specify a path for the URL the user enters, it is important to
+      understand that even if the path is the same, they will get different
+      results if they use a get request instead of a post request.
+    </p>
+    <p>
+      This would depend on what response we provide for each app.get() or
+      app.post() response.
+    </p>
+    <hr />
+    <h3>EXAMPLE</h3>
+    <p>
+      These 2 forms would provide a different result, depending on which form is
+      submitted.
+    </p>
+    <img src="getVsPOstCodeIndex.png" alt="" />
+    <p></p>
+    <img src="getVsPOstCodeHTML.png" alt="" />
+    <p>RESULTS IN --></p>
+    <img src="getVsPostResult.png" alt="" />
+    <hr />
+    <h2>Retrieving and using POST data.</h2>
+    <p>
+      We can now extract the data from the post request! The returned data is
+      parsed automatically, we just need to specify the parsing type.
+    </p>
+    <p>request.body will provide us the information entered.</p>
+    <p>
+      It is undefined by default, but we can explicitly state how it should be
+      parsed.
+    </p>
+    <p>We do this with app.use():</p>
+    <img src="urlencodedPostParsing.png" alt="" />
+    <p>
+      This will save the data into key value pairs in an object, which we can
+      console log or save to our databases.
+    </p>
+    <p>
+      WE MUST GIVE OUR INPUTS A NAME, SINCE IT WILL BE THE KEY NAME OF OUR
+      OBJECT, OTHERWISE WE WILL BE RETURNED AN EMPTY OBJECT.
+    </p>
+    <hr />
+    <p>
+      Instead of just console logging the object for ourselves, we can
+      destructure it to provide a more personal response:
+    </p>
+    <p>
+      (We gave the text input a name of tacoType and the number input a name of
+      quantity)
+    </p>
+    <img src="destructuredReturnedDataObject.png" alt="" />
+    <p>
+      All this works with form data, which is common, but if we wanted to use an
+      API tool and enter the values RAW (JSON), from an object, we would need to
+      specify a parsing type for JSON too:
+    </p>
+    <img src="postmanAPItacosPostRequestCode.png" alt="" />
+    <p></p>
+    <img src="postmanAPItacosPostRequest.png" alt="" />
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Databases</title>
+  </head>
+  <body>
+    <h1>Databases</h1>
+    <h2>Why?</h2>
+    <p>
+      They can handle large amounts od data efficiently and store it compactly.
+    </p>
+    <p>They provide tools for easy insertion, querying and updating data.</p>
+    <p>They offer security features and control over access to data.</p>
+    <p>They scale well.</p>
+    <hr />
+    <h2>Types</h2>
+    <h3>SQL vs noSQL</h3>
+    <h3>SQL</h3>
+    <p>Examples: MySQL, Postgres, SQLite, Oracle,, Microsoft SQL Server.</p>
+    <p>
+      They share a basic syntax and there are preset patterns, even before we
+      include our data. They are relational databases and certain data sections
+      reference each other.
+    </p>
+    <p>
+      For example, we may have a section for our posts data, a post may
+      reference various comments, and all comments, regardless of their post,
+      may be in another sections called comments.
+    </p>
+    <p>
+      The predefined structure determines how the data will be stored, and the
+      relation between sections.
+    </p>
+    <h3>noSQL</h3>
+    <p>Examples: MongoDB, CouchDB, Neo4j, Cassandra, Redis</p>
+    <p>They are newer and more diverse.</p>
+    <p>
+      A document-oriented database puts information in a file, in XML, JSON,
+      etc. They don't separate data, just store it all in the same place.
+    </p>
+    <p>
+      Like saving everything related to a single post inside a single object.
+      Anything we want to add would be a new key and value.
+    </p>
+    <hr />
+    <h3>MongoDB</h3>
+    <p>MongoDB is the most popular database, it works as a noSQL database.</p>
+    <p>It is commonly used with Node and Express.(MEAN and MERN stacks)</p>
+    <p>It is easy to get started when knowing JavaScript</p>
+    <p>Due to its popularity, it has a strong community of developers.</p>
+    <hr />
+    <p>
+      The Mongo Shell is very useful, not just like the node js REPL which we
+      use to test things and use as a sandbox.
+    </p>
+    <p>We open it by typing mongosh in the terminal.</p>
+    <p>
+      Once we are running MongoDB, we can access this shell and run any
+      JavaScript commands.
+    </p>
+    <p>
+      We can have multiple databases running at the same time, one for each of
+      our apps if needed.
+    </p>
+    <p>They are not connected and work separately.</p>
+    <p>
+      BY default db is our database. We can see all databases by entering show
+      databases/show dbs in the shell.
+    </p>
+    <p>Some are pre-made, but we can create our own.</p>
+    <p>
+      To do so, we type use followed by the name we want for our new database.
+    </p>
+    <p>
+      It will check if there is an existing database with the same name, and if
+      not, it will switch us to that database.
+    </p>
+    <p>
+      We will not see it with show dbs until there is any data in it, otherwise
+      it will forget it since it is empty.
+    </p>
+    <p>
+      Any time we enter use database after the first time for the same database,
+      it will simply switch to it.
+    </p>
+  </body>
+</html>

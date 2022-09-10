@@ -36,5 +36,27 @@
       anywhere we are in the file system if using the relative file path.
     </p>
     <img src="staticAssetsCodeExpress.png" alt="" />
+    <hr />
+    <h2>Bootstrap + Express JS</h2>
+    <hr />
+    <h2>EJS and Partials</h2>
+    <p>We can use templates inside our templates!</p>
+    <p>
+      We can include them when needed to not have to write common code again and
+      again.
+    </p>
+    <p>To do this, we use <%- include("partials/head") %></p>
+    <p>
+      This tag doesn't allow the HTML to escape, it treats any content files as
+      a string!
+    </p>
+    <p>
+      (If we had a partial template for the head of an HTML inside a folder
+      called partials.)
+    </p>
+    <p>
+      We can use as many partials as we want in order to reuse code, and save
+      time!
+    </p>
   </body>
 </html>
