@@ -86,5 +86,190 @@
       Any time we enter use database after the first time for the same database,
       it will simply switch to it.
     </p>
+    <hr />
+    <h2>BSON</h2>
+    <p>
+      We know about JSON, which allows us to represent objects in nested
+      structures.
+    </p>
+    <p>BSON is a text-based format</p>
+    <p>
+      Its a more compact version of JSON, MongoDB will store our JSON to a
+      representation of binary, which takes less space in memory.
+    </p>
+    <p>There are extra types in BSON too!</p>
+    <h1>CRUD</h1>
+    <h2>Inserting into MongoDB databases (C)</h2>
+    <p>
+      To do this, we need a group of data, called a collection, where we will
+      insert the data.
+    </p>
+    <p>
+      There can be a collection for every major or important section of our
+      data. We can show them with the terminal command --> show collections.
+    </p>
+    <p>
+      If we insert something into a collection that doesn't exist, it will be
+      inserted while also creating the collection.
+    </p>
+    <p>We can insert with:</p>
+    <ul>
+      <li>db.collection.insertOne() --> One object.</li>
+      <li>db.collection.insertMany() --> An array of objects.</li>
+      <li>db.collection.insert() --> EITHER ONE OR MULTIPLE OBJECTS.</li>
+      <li>
+        (Where "collection" is replaced with our desired collection name.)
+      </li>
+    </ul>
+    <p>
+      Inside the parenthesis we can pass in a JavaScript object with key value
+      pairs, which will be converted to BSON.
+    </p>
+    <p>
+      (There is no need for any type of consistency with they keys of one object
+      compared to another. If needed we can enforce a default to opposite this
+      default.)
+    </p>
+    <p>
+      With .insertOne(), we will get a message of acknowledgement of true along
+      with the object's id (Primary key _id, unique for every entry, made
+      automatically by MongoDB.).
+    </p>
+    <p>
+      We can confirm by entering show collections, where we will see our newly
+      created collection.
+    </p>
+    <p>
+      We can see a preview of our object along with all its properties with -->
+      db.collectionName.find()
+    </p>
+    <p>
+      With .insert(), we will get a BulkWriteResult object, where nInserted will
+      have a value matching the number of objects inserted.
+    </p>
+    <p>
+      (WE MUST MAKE SURE WE ARE IN THE CORRECT DATABASE TO ACCESS A COLLECTION,
+      IT WORKS THROUGH PATHS AS WITH REGULAR FILES.)
+    </p>
+    <h2>Finding with MongoDB databases (R)</h2>
+    <p>
+      We can include a key value pair inside db.collectionName.find(), it is
+      case-sensitive and the pair or pairs (ACCEPTS MULTIPLE) must go inside an
+      object's curly brackets.
+    </p>
+    <p>It will return 0, 1 or more results.</p>
+    <p>
+      If we use db.collectionName.findOne(), we will be returned the actual
+      document, not the cursor/reference like with regular find().
+    </p>
+    <p>There are more complex things like finding EITHER x or y, etc.</p>
+    <h2>Updating with MongoDB databases (U)</h2>
+    <p>To make updates to our existing objects, we must use update().</p>
+    <p>
+      We can use updateOne(), updateMany() and update(), just like with
+      insert().
+    </p>
+    <p>It will take two arguments, both inside curly brackets.</p>
+    <ul>
+      <li>
+        The first is to search for the object we want to update, where we can
+        pass one of its properties/key value pairs.
+      </li>
+      <li>
+        The seconds must include $set: followed by an object with the update we
+        are trying to make.
+      </li>
+      <p>Example: db.collectionName.update({},{$set:{}})</p>
+    </ul>
+    <p>
+      We can include as many updates for the selected object as long as they're
+      inside the $set:{} brackets, separated by commas.
+    </p>
+    <p>
+      If we include an update for a key that doesn't exist, it will be created
+      and added to the object.
+    </p>
+    <p>
+      With db.collectionName.updateMany(), we will update all matches for our
+      first find argument.
+    </p>
+    <p>
+      There are more operators like $set: we can use and combine in the same
+      operation.
+    </p>
+    <p>$currentDate: will add the current date and time to the key we add.</p>
+    <p>
+      Example: db.collectionName.update({},{$set:{},$currentDate{timeChanged:
+      true}})
+    </p>
+    <p>With replace() we will change everything to a new value.</p>
+    <h2>Deleting with MongoDB databases (D)</h2>
+    <p>We can use deleteOne() and deleteMany().</p>
+    <p>
+      It takes in one argument to find the object/objects we want to delete.
+    </p>
+    <p>
+      We can pass in multiple keys and values for a more specific search, only
+      separated by commas.
+    </p>
+    <p>
+      We can delete an entire collection with deleteMany({}), the object must be
+      empty for it to work.
+    </p>
+    <h2>Additional MongoDB Operators</h2>
+    <p>
+      We can look for matches between 2 values, or use exceptions to get
+      everything but a key value pair.
+    </p>
+    <p>
+      If we are looking for a key value pair that is inside an object nested in
+      the original object, we must use a period/dot to separate the objects as
+      in a path.
+    </p>
+    <p>
+      If we have an object, and inside there is a key called date with an object
+      as a property, which has day, month and year as key value pairs, and we
+      were looking for all matches of day:11, we would access day like this:
+    </p>
+    <p>db.collectionName.find({"date.day":11})</p>
+    <p>We can include multiple factors for our search separated by commas:</p>
+    <p>db.collectionName.find({"date.day":11,vaccinated:true})</p>
+    <hr />
+    <p>
+      There are operators to check for greater than, less than, equal to, not
+      equal to, and, or, not, etc.
+    </p>
+    <h3>$gt (greater than)</h3>
+    <p>To look for all matches with an age greater than 8:</p>
+    <p>db.collectionName.find({age:{$gt:8}})</p>
+    <p>$gte is used the same way (Greater than or equal to).</p>
+    <p>$lt (less than)</p>
+    <h3>$in</h3>
+    <p>
+      This tells the search to find any of our inputs from an array of values.
+    </p>
+    <p>
+      Example: db.collectionName.find({color:{$in:["red","white","brown"]}})
+    </p>
+    <p>
+      Any object with a key of color and a value that matches one of those in
+      the array we pass in will be returned.
+    </p>
+    <p>
+      We can combine as many operators as we want to only get the results we
+      want.
+    </p>
+    <p>
+      If we were to use $nin: (not in), we would get all matches that do NOT
+      have the values of our array.
+    </p>
+    <h3>Logical Operators and, or, not</h3>
+    <p>We can use these operators to add logic to our search.</p>
+    <p>
+      Here is an example with $or, if either one of these factors is met, the
+      object will be returned.
+    </p>
+    <p>If color is red OR age is less than 8:</p>
+    <p>db.collectionName.find({$or:[{color:"red"},{age:{$lt:8}}]})</p>
   </body>
 </html>
