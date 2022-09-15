@@ -8,5 +8,147 @@
   </head>
   <body>
     <h1>Mongoose</h1>
+    <p>
+      Instead of interacting with our database from the shell with MongoDB, we
+      can use an application to connect NodeJS with MongoDB.
+    </p>
+    <p>We can do this with Mongoose!</p>
+    <p>
+      An ODM is an object data/document mapper and connects our app to our
+      database.
+    </p>
+    <p>
+      It does so by converting the documents coming from the database into
+      usable JavaScript objects.
+    </p>
+    <p>
+      An ODM like Mongoose provides ways for us to model our app data and define
+      a schema. It helps us validate our data and build complex queries from the
+      comfort of JavaScript.
+    </p>
+    <p>
+      We can add validations and filters, preset schemas to make sure our data
+      meets the demands of that predefined schema we made.
+    </p>
+    <p>It makes the experience better and saves us time.</p>
+    <p>For SQL databases, we use ORM's instead of ODM's.</p>
+
+    <h2>Connecting Mongoose to Mongo</h2>
+    <p>
+      Upon installing mongoose, we can save it and run it in our file. Here is
+      an example of the default port and an app called movies, we added a catch
+      for error handling, and to make sure our port is running successfully.
+    </p>
+    <img src="mongooseRequire.png" alt="" />
+    <p>The model is a JavaScript class we make with Mongoose's help.</p>
+    <p>
+      There are numerous model methods we can use for each collection and
+      object.
+    </p>
+    <p>
+      We need to create a schema for our model. This is like a blueprint or map.
+      We take our data from MongoDB and pass it to Mongoose in this schema to
+      create an order.
+    </p>
+    <p>
+      We can have a data type for each key value pair, or share the same one
+      between multiple. Here we make an object to see how it would fit into out
+      schema.
+    </p>
+    <img src="schemaMongoose.png" alt="" />
+    <p>
+      Once we have created a schema and saved it into a variable, we can use the
+      method .model().
+    </p>
+    <p>It will take 2 arguments:</p>
+    <ul>
+      <li>
+        A name, WHICH MUST BE CAPITALIZED AND IN SINGULAR FORM. This will make a
+        collection in Mongoose.
+      </li>
+      <p>Example: movies --> Movie</p>
+      <li>And secondly, our schema variable.</li>
+    </ul>
+    <img src="mongooseModel.png" alt="" />
+    <p>We can now save any new instances to our database.</p>
+    <img src="mongooseNewInstance.png" alt="" />
+    <p>
+      We can access them through the node REPL or shell, and use .save() to save
+      them into our MongoDB database, the collection we are working with will be
+      empty until we do this.
+    </p>
+    <hr />
+    <h2>(C)reating/Inserting with Mongoose</h2>
+    <p>
+      We can use insertMany to create multiple objects, there is no need to call
+      .save() to push them to our database with this method, it goes directly to
+      MongoDB!
+    </p>
+    <p>SYNTAX --> Movie.insertMany([{},{}])</p>
+    <p>
+      Id doing this through our JavaScript file, we must make sure to comment it
+      out once added, as it will readd whatever we include each time we run node
+      index.js!
+    </p>
+    <h2>(R)etrieving/Finding with Mongoose</h2>
+    <p>We can find existing documents in our database with various methods.</p>
+    <p>find() has the same operators and syntax as in MongoDB.</p>
+    <p>
+      If we use it in the REPL with find.({}), we will be returned a query
+      object. Which is not the data we are looking for.
+    </p>
+    <p>
+      If we chain .then(data=> console.log(data)), we will be returned all the
+      objects inside an array, even if it is only one. (We could get a single
+      string with findOne())
+    </p>
+    <p>
+      We could now use.find and add any factors for our search to be more
+      specific:
+    </p>
+    <p>
+      Movie.find({year:{$gt:2000},score:{$gt:
+      8.0}}).then((data)=>{console.log(data)})
+    </p>
+    <h2>(U)pdating with Mongoose</h2>
+    <p>We can do this with updateOne and updateMany().</p>
+    <p>
+      This won't show us what was updated by default, but there are other
+      methods we can use instead.
+    </p>
+    <p>
+      We can pass in an object callback function with .then() to see some data
+      on the changes we made.
+    </p>
+    <p>
+      updateOne will update the first match we find, accepting an argument for
+      the search, and the other for the updates we want to make.
+    </p>
+    <p>We can use updateMany() to change multiple matches.</p>
+    <p>
+      All matches will be modified to our second argument, same syntax as
+      before.
+    </p>
+    <p>
+      findOneAndUpdate() will do the same as updateOne, but the pre-modified
+      version will be returned as a visual object.
+    </p>
+    <p>
+      If we pass in a 3rd argument called {new: true}, which is false by
+      default, we will be returned a visual version of the modified object!
+    </p>
+    <h2>(D)eleting with Mongoose</h2>
+    <p>
+      To do this we can use remove(), which takes one argument for our
+      search/find.
+    </p>
+    <p>
+      We can use other methods depending on if we want to be returned the
+      object.
+    </p>
+    <p>
+      With findOneAndDelete() we will actually get the object we removed back,
+      not just the default message..
+    </p>
   </body>
 </html>
