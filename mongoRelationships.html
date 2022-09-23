@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mongo Relationships</title>
+  </head>
+  <body>
+    <h1>Mongo Relationships</h1>
+    <p>
+      Relationships between data are the different entities we store in a
+      database that are connected in one way or another.
+    </p>
+    <p>
+      A website for social media may have a user's friends in one entity, its
+      profile pictures and posts in another, and comments and likes in yet
+      another one.
+    </p>
+    <p>
+      Although they are separate entities, they are all in the same database,
+      interconnected in ways to always have the data available.
+    </p>
+    <h2>In SQL</h2>
+    <p>
+      In SQL, the data is stored in isolated tables, where strict schemas are
+      needed. Each table can be connected and accesses by another one by inking
+      them.
+    </p>
+    <p>
+      A single or multiple aspect of each table can be referenced in order to
+      avoid duplication.
+    </p>
+    <p>There are many ways to do this:</p>
+    <ul>
+      <h3>One to Many</h3>
+      <li>We can have a single user with many posts.</li>
+      <h3>Many to Many</h3>
+      <li>
+        We can have a single movie, with many actors, while also a single actor
+        who has been in many movies.
+        <ul>
+          <p></p>
+          <li>
+            In this case, the linking table would reference a movie's name id
+            with each participating actor's name id.
+          </li>
+          <li>
+            Or the actor's name id with the name id of every movie he has been
+            in.
+          </li>
+          <li>
+            It's like copying and pasting the information in order to avoid
+            duplicating all the data multiple times.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2>In MongoDB (non-SQL)</h2>
+    <p>
+      Since MongoDB does not follow the same pattern/infrastructure as SQL
+      database, we do this linking/referencing in alternate ways.
+    </p>
+    <p>There are many structuring options for our data.</p>
+    <p>
+      Depending on how much data we're working with, it may be wise to choose
+      different approaches for information storing.
+    </p>
+    <h3>One to Few</h3>
+    <p>
+      A user with a few addresses, like in Amazon, Uber Eats. It's cery unlikely
+      to have thousands of addresses. There's no need to separate them to their
+      own collection or model.
+    </p>
+    <p>
+      We should consider if we need to access an address without the user, if we
+      would ever need to access all of them at the same time, etc.
+    </p>
+    <p>Here is an example:</p>
+    <p>
+      We create a schema, with one of the keys having an array of keys and
+      values as its value.
+    </p>
+    <p>
+      BY default, this embedded array will generate its own _id, which we can
+      prevent as seen in the code.
+    </p>
+    <img src="oneToFewMongoRelationshipSchema.png" alt="" />
+
+    <p>Here we use our schema to create a new user.</p>
+    <img src="oneToFewMongoRelationshipCreateUser.png" alt="" />
+    <p>
+      And here we make a function to add a new address to the array designated
+      for addresses.
+    </p>
+    <img src="oneToFewMongoRelationshipAddNewAddress.png" alt="" />
+    <h3>One to Many</h3>
+    <p>This is our approach for a medium amount of data.</p>
+    <p>
+      We will use an object id in the parent object as a reference to the other
+      objects in order to reference them. It can be another key instead too.
+    </p>
+  </body>
+</html>
