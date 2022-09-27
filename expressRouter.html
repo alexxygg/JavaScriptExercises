@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express Router and Cookies</title>
+  </head>
+  <body>
+    <h1>Express Router</h1>
+    <p>Express comes with a different structure to organize our paths.</p>
+    <p>
+      In a larger app with many more routes, we may not want to have all paths
+      in a single file.
+    </p>
+    <p>
+      A Router object is a mini application we can combine with other routers to
+      set our app.
+    </p>
+    <p>In an animal shelter app, there may be a file for:</p>
+    <ul>
+      <li>/shelters</li>
+      <li>POST /shelters</li>
+      <li>/shelters/:id</li>
+      <li>/shelters/:id/edit, ETC.</li>
+    </ul>
+    <p>There may be another one for dogs with similar examples.</p>
+    <p>
+      There are more complex apps where we must be sure not to confuse our
+      paths.
+    </p>
+
+    <hr />
+    <h2>Setting up our router</h2>
+    <p>
+      We must require our route files and save them into a variable first. Those
+      route files will be where we include all of our paths for each prefix.
+    </p>
+    <p>
+      The first argument will be the prefix we want as a default for all the
+      paths in the routes file.
+    </p>
+    <p>
+      The path prefix we include here will not be needed in our shelter routes!
+    </p>
+    <p>
+      By leaving it empty, (Just /), we MUST include it on every single path in
+      the paths file.
+    </p>
+    <p>
+      (If we were to include it on both parts, we would need to use
+      /shelters/shelters followed by any additional path. )
+    </p>
+    <img src="routerIndexFile.png" alt="" />
+    <p>
+      Now, in the actual routes files, we must use and execute the Router()
+      method by saving it into a variable.
+    </p>
+    <p>
+      We can now set all the paths we want, they will all start with the same
+      prefix, which is based on what we call it on our index file, where we
+      listen for our express server.
+    </p>
+    <p>
+      We must also export each routes file, since we have already required it on
+      our index.
+    </p>
+    <img src="routesFileShelters.png" alt="" />
+    <img src="routesFileDogs.png" alt="" />
+    <h2>Middleware</h2>
+    <p>
+      We can also have middleware that will ONLY run on the paths that are in
+      the same local document!
+    </p>
+    <p>
+      Here we have an example for some admin websites, which should only be
+      accessible by someone with admin credentials.
+    </p>
+    <img src="adminIndexFile.png" alt="" />
+
+    <p>
+      By declaring our code in the route that we specifically want to target, we
+      make sure that the code only runs on the local paths.
+    </p>
+    <p>
+      If we were to include it in our index, it would run for every path, not
+      just the admin ones.
+    </p>
+    <img src="adminRouteFile.png" alt="" />
+  </body>
+</html>
