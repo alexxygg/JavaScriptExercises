@@ -100,5 +100,85 @@
       We will use an object id in the parent object as a reference to the other
       objects in order to reference them. It can be another key instead too.
     </p>
+    <p>
+      We again create a schema, this time for a farm, and then another for our
+      products.
+    </p>
+    <p>
+      We link them together by using ref: which references our schema variable
+      products in our farm schema, and finally save them into their own
+      variables, even though we referenced one of them first.
+    </p>
+    <img src="oneToManySchemas.png" alt="" />
+    <p>
+      We can now add products to our products database, and create a new farm.
+    </p>
+    <p>
+      We take one of our newly created products and push it to our farm's
+      products array for objects.
+    </p>
+    <img src="makeFarmOneToMany.png" alt="" />
+    <p>
+      And here we make a function and execute it to create a new product and
+      also push it to our farm:
+    </p>
+    <img src="newProductFarmOneToMany.png" alt="" />
+    <h2>Mongoose populate()</h2>
+    <p>
+      Our ne farm will have a key called products, and the value will be an
+      array of objects with any products we assigned it.
+    </p>
+    <p>
+      Unfortunately, they won't show us the name, price or season. Instead we
+      will see the object id of each product only.
+    </p>
+    <p>
+      To overcome this and have a visual representation instead, we can use the
+      populate method.
+    </p>
+    <p>
+      (What we pass in is whichever variable name we called the reference for
+      the array of objects.)
+    </p>
+    <img src="populateMethodOneToMany.png" alt="" />
+    <h2>One to Many MOREEE</h2>
+    <p>Sometimes we many need many more references in our database.</p>
+    <p>A user many have created thousands of tweets in their lifetime.</p>
+    <p>
+      We can reference the user to each tweet, instead of having all tweets in
+      an array of objects inside the user's object.
+    </p>
+    <p>Here is an example, first we create the schemas:</p>
+    <img src="twitterSchemasOneToMORE.png" alt="" />
+    <p>
+      Then we create a user and a pair of tweets. We save the user first, then
+      the tweets in the user object directly.
+    </p>
+    <img src="twitterMakeTweetsAndUserOneToMORE.png" alt="" />
+    <p>
+      And we access every tweet along with the visual of the username for the
+      creator of each tweet.
+    </p>
+    <img src="twitterPopulateOneToMORE.png" alt="" />
+    <hr />
+    <p>
+      So we know we can embed an array of objects as a key to a value, store a
+      reference to another array of objects on a parent, and store a reference
+      to a parent in a child object.
+    </p>
+    <p>
+      We can even combine these options, like storing reference on both child
+      and parent objects for each other to go both ways. It could help prevent
+      the need to populate.
+    </p>
+    <h2>Mongo Schema Design</h2>
+    <p>
+      There are additional considerations once we apply database relationships
+      int our apps.
+    </p>
+    <p>
+      It may make sense to store the data on both referenced sides, which is a
+      bad idea in SQL databases.
+    </p>
   </body>
 </html>
