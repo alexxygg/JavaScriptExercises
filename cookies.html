@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTTP Cookies</title>
+  </head>
+  <body>
+    <h2>Cookies</h2>
+    <p>
+      HTTP cookies are ways to track user data, there has been much legislation
+      regarding them.
+    </p>
+    <p>
+      They are bits of information we can store in a user's browser, associated
+      to specific webpages.
+    </p>
+    <p>
+      The user's browser sees them in future visits. Otherwise, there would be
+      no history of if someone had ever visited our page before. It can be used
+      to remember a user's shopping cart, dark mode preferences and many other
+      things.
+    </p>
+    <p>
+      It helps us show relevant content and offer a more personal experience. No
+      need to ask every single time for these details.
+    </p>
+    <p>
+      Most importantly, they are used for tracking, since many webpages sell
+      user information for publicity reasons.
+    </p>
+    <p>
+      They are unique identifiers that can tell any two user's apart. THese name
+      and value pairs show things like last access date.
+    </p>
+    <p>
+      We should use them for ethical things, such as knowing if a user is logged
+      in, where they are logging in from (For security reasons and user account
+      protection. ), etc.
+    </p>
+    <h2>Sending cookies</h2>
+    <p>
+      To send a cookie, we must use the cookie() method on our response
+      argument/object.
+    </p>
+    <p>It will take two arguments:</p>
+    <ul>
+      <li>
+        The first for the name we want to assign the key in our cookie key value
+        pair.
+      </li>
+      <li>The second for the value of our value counterpart.</li>
+    </ul>
+    <p>If a new value is added to our key, the old one will be replaced.</p>
+    <p>
+      We can see all cookies from the browser's Dev Tools or by making a request
+      with an API tool like Postman and viewing the cookies section.
+    </p>
+    <p>
+      We can also specify additional things to configure and control them
+      better, for example:
+    </p>
+    <ul>
+      <li>A domain name.</li>
+      <li>We can encode our cookies.</li>
+      <li>Set an expiration date. a</li>
+      <li>
+        Set a maxAge (a time limit based on the time the cookie is sent for the
+        first time. i.e: A year from now.).
+      </li>
+    </ul>
+    <p>
+      And we can include as many cookies as we want in a specific request path.
+    </p>
+    <img src="cookies.png" alt="" />
+    <h2>Cookie Parser Middleware</h2>
+    <p>
+      If we want to use the stored cookie data, we can find it in req.cookies.
+    </p>
+    <p>
+      Since a lot of application don't make use of cookies, the parser package
+      we need to do this is not installed by default.
+    </p>
+    <p>We can install it with npm i cookie-parser.</p>
+    <p>
+      We must save it to a variable by requiring it, and declare an app.use()
+      with the function being executed inside it.
+    </p>
+    <p>Now we can access to req.cookies.</p>
+    <p>
+      If we were to console log req.cookies, we would see an object with every
+      key value pair of cookies.
+    </p>
+    <img src="cookieParserReqDotCookies.png" alt="" />
+    <p>
+      We can use them in a string template literal for a more personal
+      experience.
+    </p>
+    <p>
+      Here we destructure req.cookies and make use of 2 of the key's values.
+    </p>
+    <p>(In case name is empty, we have set a default value of 'Anonymous')</p>
+    <img src="usingSlashAccessingReqDotCookies.png" alt="" />
+    <p>
+      We could close the browser and reopen it, and we would still have access
+      to that data, since it is stored in a local file on the computer.
+    </p>
+    <p>
+      This does not work across browsers, which is why we should not store
+      important information in cookies.
+    </p>
+    <h2>Signing Cookies</h2>
+    <p>Signed cookies include a digital/cryptograhic signature.</p>
+    <p>We use it to verify if there has been any changes.</p>
+    <p>It's like a broken seal in a food product.</p>
+    <p>
+      The cookie parser signs it, and sends a weirder looking version of it to
+      the client. Then, that signed version is sent back like a regular cookie.
+    </p>
+    <p>
+      On the server side we can tell if they are the same values sent, or if
+      they've been modified in any way, if it has been compromised or if it is
+      still the same.
+    </p>
+    <h2>Sending signed cookies and retrieving their data</h2>
+    <p>
+      To do the cookie signing, we must pass in a "secret" to our
+      app.use(cookieParser()).
+    </p>
+    <p>
+      This "secret" is simply a string we can make up, although in the real
+      world it would be much more secure and hidden from view, we would need to
+      take special security measures to assure this.
+    </p>
+    <p>
+      We must also include a third argument in our res.cookie(), so other than
+      the key name and value, we must add { signed: true }.
+    </p>
+    <p>
+      The resulting cookie value, which is different from a non-signed cookie
+      with the same value, will have the value somewhere in it. The point is not
+      to hide the value, but to verify the integrity/validity, that it hasn't
+      changed or been tampered with!
+    </p>
+    <p>
+      One thing to notice is that the key and value of our signed cookie would
+      not show if we were to console log req.cookies.
+    </p>
+    <p>
+      To view it, we would need to change it for req.signedCookies, which only
+      works if we have our parser installed, and we included a "secret" in our
+      app.use(). This is to make a clear distinction between the cookie types.
+    </p>
+    <p>
+      If for any reason we were to change the cookie value in the Dev Tools, or
+      through an API tool, we again would not see the key value pair, even if
+      console logging req.signedCookies.
+    </p>
+    <p>This is because the cookie-parser failed to verify the cookie.</p>
+    <img src="signedCookie.png" alt="" />
+    <h2>HMAC signing</h2>
+    <p>HMAC stands for Hash Message Authentication Code.</p>
+    <p>
+      This is the method used to compare the original key value with whatever
+      the current one is. It also takes into account the secret key to try to
+      recreate a code and compare it with the original code. It does this by
+      calling a function.
+    </p>
+    <p>If they don't match, we know it was changed.</p>
+  </body>
+</html>
