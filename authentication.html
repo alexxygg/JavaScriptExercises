@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication</title>
+  </head>
+  <body>
+    <h1>Authentication</h1>
+    <h2>Authentication vs Authorization</h2>
+    <p>
+      Authentication is the process of verifying the user is the real person.
+    </p>
+    <ul>
+      <li>
+        Normally, this is done with a username and password combo, but also
+        security questions, facial recognition and other options are available.
+      </li>
+    </ul>
+    <p>
+      Authorization normally happens after a user has been authenticated. It
+      declares what a specific user has access to.
+    </p>
+    <ul>
+      <li>
+        "Now that you are authenticated, here is what you CAN and CAN'T do:"
+      </li>
+    </ul>
+    <h2>How NOT to store passwords</h2>
+    <p>NEVER store passwords in text, as is in a database.</p>
+    <p>If anyone gets their hands on a database, this can be a big problem.</p>
+    <p>
+      Since many users reuse their passwords across websites and apps, we can
+      compromise those credentials too.
+    </p>
+    <h2>Hashing</h2>
+    <p>
+      Instead of storing passwords in a databse, we can run the user's password
+      through these functions first, and THEN store the resulting password.
+    </p>
+    <p>
+      Hashing functions are one-way functions, they can not be inverted. This
+      means there is no way to figure the original input from the resulting
+      output alone. There are no hints in it or relation between them.
+    </p>
+    <p>
+      A small change in the input created a huge change to the output. CHanging
+      a single digit would change the output completely. It wouldn't look
+      similar just because the change is miniscule.
+    </p>
+    <p>
+      A same input always results in the same output, this is how the algorithm
+      verifies it is correct.
+    </p>
+    <p>No two outputs are the same.</p>
+    <p>
+      They map input data of some arbitrary size (different inputs have more or
+      less characters), to fixed-size output values (a unreadable code of the
+      same length or hashed password, regardless of the original length).
+    </p>
+    <p>
+      The same algorithm or hashing function is used for all inputs. It should
+      always give the same output for a specific input.
+    </p>
+    <p>
+      Password has functions are deliberately slow, this is a security measure
+      for people trying different combinations at high rates.
+    </p>
+    <h2>Salts</h2>
+    <p>
+      In order to make it extra hard to reverse engineer our output hash
+      passwords, and having in mind that users regularly use the same password
+      on every password, we use an extra layer of security when hashing
+      passwords.
+    </p>
+    <p>
+      Also because many users choose a password from a variety of commonly-used
+      passwords, making it even easier for mal-intentioned people.
+    </p>
+    <ul>
+      <li>More than 10 percent of ALL passwords is one of 20 passwords.</li>
+    </ul>
+    <p>
+      Hackers may have a giant index of hashed passwords matching their original
+      input.
+    </p>
+    <p>
+      This is where SALTS come in. They are extra characters added to a
+      password, and as we know, a small difference to the input will drastically
+      change the resulting hashed output. This way, a hacker's index will be
+      useless.
+    </p>
+    <p>
+      So we add random data to a password at the beginning or end of it, hash
+      that combination, and then store the hashed output to our database. We
+      obviously need to know what the salt is and store it to later remove it
+      from the input and compare it with the original user's password.
+    </p>
+    <h2>BCRYPT</h2>
+    <p>This is one of very few recommended hash functions.</p>
+    <p>
+      It's been around since 1999, and we can use the JS implementations we
+      prefer.
+    </p>
+    <p>
+      bcrypt.js will run on the client-side and on the server-side, where
+      regular bcrypt is only server-side, (Not accessible through the browser).
+    </p>
+  </body>
+</html>
