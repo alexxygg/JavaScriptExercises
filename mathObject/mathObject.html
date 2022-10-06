@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>math Object</title>
+  </head>
+  <body>
+    <h1>math Object</h1>
+    <p>Entering Math on the console will show all the methods available.</p>
+    <p>Math.PI;</p>
+    <p>RESULTS IN --> 3.141592653589793</p>
+    <h2>Math.floor() ------FLOOR</h2>
+    <p>
+      It helps us remove the decimals after a number, NOT ROUND TO NEAREST
+      INTEGER.
+    </p>
+    <p>Math.floor(57.58999);</p>
+    <p>RESULTS IN --> 57</p>
+    <h2>Math.ceil() ------CEILING</h2>
+    <p>It helps us round up to the nearest whole number.</p>
+    <p>Math.ceil(65.1377);</p>
+    <p>RESULTS IN --> 66</p>
+    <h2>Math.random() -----0.0001 - 0.9999</h2>
+    <p>
+      This one gives us a random number between 0 and 1, not including 0.00 or
+      1.00.
+    </p>
+    <p>Here we ran the object 5 times, each time getting a different result.</p>
+    <p>Math.random();</p>
+    <p>0.18921601405383504</p>
+    <p>0.24608831727477898</p>
+    <p>0.043282273042410724</p>
+    <p>0.7024694114192809</p>
+    <p>0.27513956962197517</p>
+    <h2>Get a random INTEGER</h2>
+    <p>Math.floor(Math.random() *5);</p>
+    <p>This would give is a random number including 0, 1, 2, 3, and 4.</p>
+    <p>2</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>1</p>
+    <p>0</p>
+    <p>
+      If we want numbers between 1 and 5, not including the 0 this time, and
+      including the 5:
+    </p>
+    <p>Math.floor(Math.random() *5) + 1;</p>
+    <p>1</p>
+    <p>4</p>
+    <p>2</p>
+    <p>1</p>
+    <p>3</p>
+    <p>5</p>
+    <p>And the same for any other number.</p>
+    <p>Math.floor(Math.random() *10) + 1; -->Between 1 and 10!</p>
+    <p>Math.floor(Math.random() *35) + 1; -->Between 1 and 35!</p>
+    <p>Math.floor(Math.random() *100) + 1; -->Between 1 and 100!</p>
+    <h2>Between specific numbers only.</h2>
+    <p>Say we wanted a random number between 30 and 35.</p>
+    <p>
+      First we need to count the number of options, which in this case would be
+      6: (30, 31, 32, 33, 34, 35).
+    </p>
+    <p>So we can now place 6 to our *.</p>
+    <p>
+      We also need to change the + to 30, since it is the first number we want
+      to include.
+    </p>
+    <p>Math.floor(Math.random() *6) + 30; -->Between 30 and 35!</p>
+    <hr />
+    <p>Math.floor(Math.random() *6) + 30; -->Between 54 and 61!</p>
+    <h2>Others</h2>
+    <p>
+      The Math object helps us do other things we can normally do without it.
+    </p>
+    <p>Like getting the result of a number to the power of another number.</p>
+    <p>Math.pow(7, 3);</p>
+    <p>This is 7 to the power of 3, or 7 * 7 * 7.</p>
+    <p>Which we know we can get with: 7 ** 3;</p>
+    <p>Both result in 343.</p>
+    <h2>Dice!</h2>
+    <p>
+      If we wanted to make a dice game, we can use the information we learned
+      here to achieve it!
+    </p>
+    <p>FIrst we will need to generate a random number between 1 and 6.</p>
+    <p>
+      IN this case we can make them const variables, since the algorithm used
+      will not change.
+    </p>
+    <p>
+      Here we will have 2 dice, and we will create a message to let the user
+      know what each number was, and also a sum of them.
+    </p>
+    <p>const die1 = Math.floor(Math.random()*6) +1;</p>
+    <p>const die2 = Math.floor(Math.random()*6) +1;</p>
+    <p>
+      rollMessage = `You rolled a ${die1} and a ${die2}. They sum to ${die1 +
+      die2}!`
+    </p>
+    <p>die1;</p>
+    <p>RESULTS IN --> 4</p>
+    <p>die2;</p>
+    <p>RESULTS IN --> 2</p>
+    <p>rollMessage;</p>
+    <p>RESULTS IN -->'You rolled a 4 and a 2. They sum to 6!'</p>
+  </body>
+</html>
