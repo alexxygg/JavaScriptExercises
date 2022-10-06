@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+    <script src="scope.js"></script>
+  </head>
+  <body>
+    <h1>Scope</h1>
+    <p>It is variable visibility.</p>
+    <p>
+      Defining a variable in a function, in the open, nested,etc. will affect
+      where it can be reached from.
+    </p>
+    <img src="scopeExamples.png" alt="" />
+    <p>
+      Here we have another example, we have a variable with the same name inside
+      and outside a function.
+    </p>
+    <p>
+      If we just console log egg outside the function, white will be logged.
+    </p>
+    <p>
+      If we didn't have the outside variable egg defined, we would not be able
+      to access the egg variable from the function at all, it would be out of
+      scope.
+    </p>
+    <p>
+      If we console log egg from inside the function and only have the outside
+      variable for egg defined there, we could access it again, with it's
+      corresponding value.
+    </p>
+    <img src="anotherScopeExample.png" alt="" />
+    <h2>A few more examples:</h2>
+    <img src="aFewMoreScopeExamples.png" alt="" />
+  </body>
+</html>
