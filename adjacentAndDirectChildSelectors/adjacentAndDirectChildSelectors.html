@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adjacent and Direct child selectors</title>
+    <link rel="stylesheet" href="adjacentAndDirectChildSelectors.css" />
+  </head>
+  <body>
+    <h1>Adjacent and Direct child selectors</h1>
+    <p>
+      These two help us be specific about the elements we are trying to style.
+    </p>
+    <h2>Adjacent selector</h2>
+    <p>
+      The adjacent selector uses a plus sign, which indicates we want the
+      element that goes right after the first one.
+    </p>
+    <p>Below we have 3 buttons.</p>
+    <p>
+      We only want to style the buttons that have a paragraph right before it.
+    </p>
+    <p>
+      We used this code to achieve this: p + button { background-color: tomato;
+      }
+    </p>
+    <div>
+      <button>HELLOOOO</button>
+      <button>HELLOOOO</button>
+      <button>HELLOOOO</button>
+    </div>
+    <h2>Direct child selector</h2>
+    <p>
+      The direct child selector is used when trying to access an element focused
+      more on the structure of your code.
+    </p>
+
+    <p>
+      Below we have many buttons, they are all inside a form, but we also have
+      one outside the form.
+    </p>
+    <p>We can access it with the selector we just mentioned.</p>
+    <p>
+      The code we used to reach it is: body > button { background-color: aqua; }
+    </p>
+    <form action="fdfdfdfd">
+      <button>Button</button>
+      <button>Button</button>
+      <button>Button</button>
+      <button>Button</button>
+      <button>Button</button>
+      <button>Button</button>
+    </form>
+    <button>Button outside form</button>
+  </body>
+</html>

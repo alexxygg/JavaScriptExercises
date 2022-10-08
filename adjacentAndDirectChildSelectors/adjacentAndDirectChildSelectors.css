@@ -1,0 +1,7 @@
+p + button {
+  background-color: tomato;
+}
+
+body > button {
+  background-color: aqua;
+}
