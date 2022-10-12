@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding and Removing Elements</title>
+  </head>
+  <body>
+    <h1>Adding and Removing Elements</h1>
+    <p>We can create and destroy elements easily with:</p>
+    <ul>
+      <li>document.createElement("")</li>
+    </ul>
+    <img src="appendChild.png" alt="" />
+    <p>We append our new element to the end of the body with:</p>
+    <ul>
+      <li>document.body.appendChild("")</li>
+    </ul>
+    <p>RESULTS IN --></p>
+    <img src="appendChildResult.png" alt="" />
+    <hr />
+    <h2>append</h2>
+    <p>We can also use append!</p>
+    <p>It lets us create or append multiple elements at the same time.</p>
+    <p>Here we add 2 sentences to the first paragraph.</p>
+    <p>
+      WE MUST BE AWARE OF SPACES TO BE CONSISTENT WHEN PASSING MULTIPLE
+      ARGUMENTS TO OUR EXISTING ELEMENT.
+    </p>
+    <img src="append.png" alt="" />
+    <img src="appendResult.png" alt="" />
+    <h2>prepend</h2>
+    <p>
+      We can instead add a new element to the beginning of another element with
+      .append()
+    </p>
+    <img src="prependConde.png" alt="" />
+    <img src="prepend.png" alt="" />
+    <hr />
+    <h2>insertAdjacent</h2>
+    <p>We can insert an element in a way that it is not a child too.</p>
+    <p>
+      We need 2 arguments, the first specifies where exactly we want to append
+      our new element.
+    </p>
+    <p>We can use:</p>
+    <ul>
+      <li>"beforebegin" ---- (Before the targetElement)</li>
+      <li>
+        "afterbegin" ----(Inside the targetElement, before its first child)
+      </li>
+      <li>"beforeend" ----(Inside the targetElement, after its last child)</li>
+      <li>"afterend" ----(After the targetElement)</li>
+    </ul>
+    <hr />
+    <p>So we can do the same thing with our choice of positioning argument.</p>
+    <img src="insertAdjacentElement.png" alt="" />
+    <p>RESULTS IN --></p>
+    <img src="insertAdjacentElementResult.png" alt="" />
+    <p>
+      We could've also made a variable for the first h1 header and used afterend
+      to get the same position result!
+    </p>
+    <h3>Another example:</h3>
+    <img src="beforeAfterExampleInitial.png" alt="" />
+    <p></p>
+    <img src="beforeAfterExampleCode.png" alt="" />
+    <p>RESULTS IN --></p>
+    <img src="beforeAfterExampleResult.png" alt="" />
+    <h2>.before and .after</h2>
+    <p>The other options are simple .before and .after:</p>
+
+    <h2>100 Buttons with a loop.</h2>
+    <p>Here we create 100 buttons with a for loop and appendChild!</p>
+    <img src="hundredButtonsHTML.png" alt="" />
+    <img src="hundredButtonsJS.png" alt="" />
+    <p>RESULTS IN --></p>
+    <img src="hundredButtonsResult.png" alt="" />
+  </body>
+</html>
