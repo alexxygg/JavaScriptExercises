@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express Middleware</title>
+  </head>
+  <body>
+    <h1>Express Middleware</h1>
+    <p>They are functions that run during the request and response.</p>
+    <p>They have access to the req and res objects.</p>
+    <p>
+      It can end the HTTP request by sending back a response, i.e res.send()
+    </p>
+    <p>OR it can be chained together, one after another by using next()</p>
+    <p>It can execute code, make changes to req and res too.</p>
+    <hr />
+    <h2>Morgan</h2>
+    <p>It helps us log HTTP requests into our terminal.</p>
+    <p>We can install it with npm i morgan.</p>
+    <p>
+      It will log the type of request, the path and the ms it takes to send the
+      response!
+    </p>
+    <p>
+      We just have to save it to a variable. (require it) and execute it with
+      app.use().
+    </p>
+    <ul>
+      <li>const morgan = require("morgan");</li>
+      <li>app.use(morgan("tiny"));</li>
+      <p>
+        It can be customized further. Using dev instead of tiny will colorize
+        the HTTP code. common will include the date, etc.
+      </p>
+    </ul>
+    <hr />
+    <h2>Our own middleware.</h2>
+    <p>We can write our own middleware to use on our apps.</p>
+    <p>
+      By including a third argument in our functions, which we can call next, we
+      are telling our code to move on to the NEXT middleware, the only other
+      thing we need to do is execute next by including next() inside our
+      function.
+    </p>
+    <p>
+      If we don't call next, the line ends where the last middleware that DOES
+      call next is.
+    </p>
+    <p>
+      Any code we include after calling next will still run, eventually after
+      finishing the order of next calls. It may be important to pay attention to
+      order.
+    </p>
+    <p>(res.send() will stop any chain)</p>
+    <img src="nextArgumentMiddleware.png" alt="" />
+    <hr />
+    <p>
+      This will console log the request type and the path the user requested.
+      Close to what Morgan does. It will also apply POST to any request, even if
+      it is a browser GET request since we are applying it to all incoming
+      requests.
+    </p>
+    <img src="reqMethodReqPath.png" alt="" />
+    <p>
+      It is important to position our middleware correctly, as they may not run
+      if another response is matched and sent before it reaches our code.
+    </p>
+    <p>Any res.send() will stop any code below it from executing!!!</p>
+    <hr />
+    <h2>app.use()</h2>
+    <p>
+      We know any code inside an app.use() will run on every single incoming
+      request.
+    </p>
+    <p>We can use this to our advantage:</p>
+    <img src="appDotUseForAllRequestTypes.png" alt="" />
+    <p>
+      This console log will run if we make a GET/POST/PUT/PATCH etc. request,
+      but only if the request is for /dogs!.
+    </p>
+    <p>
+      If we had many routes that start the same way, we may want a particular
+      middleware for all of them.
+    </p>
+    <p>
+      We can even run the middleware IF it includes dogs anywhere on the request
+      if needed.
+    </p>
+    <h2>404 NOT FOUND Error</h2>
+    <p>
+      We can include an app.use() at the end of our code, it will only run if
+      none of our paths are matched.
+    </p>
+    <p>There's no need for next here, since it is at the end.</p>
+    <p>
+      It will return a 200 code, since technically a path was matched, which is
+      our middleware.
+    </p>
+    <img src="404errorHandlingAppDotUse.png" alt="" />
+    <p>
+      We can simply add res.status(404) before our .send() to change the default
+      200 code:
+    </p>
+    <img src="resDotStatus404.png" alt="" />
+    <h2>Protecting all/specific routes</h2>
+    <p>
+      If we wanted to add a level of security to all of our paths, we could ass
+      some code:
+    </p>
+    <ul>
+      <li>
+        It will check if there is a query string with a key of password and a
+        value of thePassword. If it does, it will continue to the next
+        middleware, whichever match it finds. If not, we will send a wrong
+        password message.
+      </li>
+      <li>
+        It is important to place it before all of our paths in order to check
+        for the condition before providing the user a match.
+      </li>
+    </ul>
+    <img src="simpleSecurityLevelAllPaths.png" alt="" />
+    <p>
+      If we wanted to only apply to a specific path, we could include it in a
+      string before the function arguments:
+    </p>
+    <img src="simpleSecurityLevelSinglePath.png" alt="" />
+    <p>
+      OR we could save the code to a function, and include it in between the
+      path and the function arguments!
+    </p>
+    <ul>
+      <li>
+        This will allow us to reuse our function only in the paths we want,
+        while only defining the function once!
+      </li>
+      <p>
+        We must make sure to include the next argument and function execution in
+        order to have our response sent.
+      </p>
+    </ul>
+    <img src="simpleSecurityLevelSinglePathFunctionAsArgument.png" alt="" />
+  </body>
+</html>
