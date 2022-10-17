@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Templating</title>
+</head>
+
+<body>
+  <h1>Templating</h1>
+  <p>
+    This helps us define a preset pattern for our webpages, which we can
+    dynamically modify.
+  </p>
+  <p>We can use EJS for this! (Embedded JavaScript)</p>
+  <p>It works like a string template literal ${}, but we can use HTML too!</p>
+  <p>This add logic and dynamism to our code.</p>
+  <p>It uses JS syntax, so we won't have to learn any new language.</p>
+  <p>We can fill in the blanks easily and effortlessly.</p>
+  <h2>Setting EJS</h2>
+  <p>
+    We must configure EJS to let Express know that it will be the engine we
+    will be using for templating.
+  </p>
+  <p>We do this with a method called set: request.set()</p>
+  <p>It takes 2 arguments, the jey/property and the value.</p>
+  <p>We also need to install ejs if we have not done so already globally.</p>
+  <p>We will now have a folder called ejs inside our node_modules folder.</p>
+  <p>
+    We must include our templates in a folder called views, since it is the
+    default name that EJS will check when looking for said templates. (IT CAN
+    BE CHANGED)
+  </p>
+  <p>Inside it we will create a home.ejs file.</p>
+  <p>
+    Now we can use response.render() inside any of our routes, this method
+    will use our template, rendering a view to the webpage. We pass in
+    home.ejs when executing it. (response.render("home.ejs"))
+  </p>
+  <p>
+    (We don't need .ejs for the render method as long as we set() the view
+    engine to ejs.)
+  </p>
+  <p>
+    Any contents from our template will now be displayed when the user
+    accesses the path where we used .render()
+  </p>
+  <img src="ejsSetUp.png" alt="" />
+  <h2>Setting the Views Directory</h2>
+  <p>
+    If we are not inside the folder where our views folder is, EJS will not
+    have access to it, even if we successfully run our server by specifying
+    the relative path with nodemon /aFolder/index.js.
+  </p>
+  <p>
+    The server will run, but EJS won't find the Views directory because it
+    will look wherever we currently are in the terminal.
+  </p>
+  <hr />
+  <p>To run the code from anywhere, we can change the views directory.</p>
+  <p>
+    We will need a built in module for this which will in few words splice and
+    join the current directory we are in, whichever it may be, and join it
+    with the /views folder.
+  </p>
+  <p>
+    This will basically change the location where EJS will look for views, we
+    are replacing the default with where our views folder is instead.
+  </p>
+  <img src="pathModuleLookForViewsFolder.png" alt="" />
+
+  <p>
+    (The double underscore takes our path and uses it when putting the string
+    together.)
+  </p>
+  <p>
+    NOW WE CAN RUN OUR SERVER BY SPECIFYING THE PATH OF OUR index.js FILE FROM
+    WHATEVER LOCATION WE ARE AT IN THE TERMINAL, AND EJS WILL STILL FIND THE
+    VIEWS DIRECTORY!!!
+  </p>
+  <p>This is frequently seen in Express JS applications.</p>
+  <h2>EJS Syntax</h2>
+  <p>
+    EJS has special syntax for JavaScript, it works a lot like string template
+    literals do.
+  </p>
+  <p>
+    If we use the EJS special tags, EJS will replace the content inside them
+    and create HTML according to the type of tag.
+  </p>
+  <p>
+    We can use methods on strings, math operations, basically anything we can
+    do in a JS file, as long as it is inside the corresponding EJS tags.
+  </p>
+  <p>It must also be a .ejs file to work.</p>
+  <h2>Passing data to Templates</h2>
+  <p>
+    We regularly try to remove as much logic as possible from our templates.
+  </p>
+  <p>
+    We should generate our content first and pass it to our template instead
+    of doing the JavaScript inside EJS tags of our EJS file.
+  </p>
+  <p>Here are both versions:</p>
+  <p>AVOID:</p>
+  <img src="inlineEJStag.png" alt="" />
+  <p>BEST PRACTICE:</p>
+  <p>(It would still work if both the key and value had the same name)</p>
+  <img src="notInlineEJS.png" alt="" />
+  <img src="notInlineEJSresult.png" alt="" />
+  <p>
+    Both would work, but it you can see the difference when dealing with a lot
+    of logic inside the ejs file.
+  </p>
+  <hr />
+  <h3>Another example:</h3>
+  <p>This would replace all the EJS tags with the user's search:</p>
+  <p>i.e In /r/whales, we would reuse the value "whales".</p>
+  <img src="redditExampleRequestCode.png" alt="" />
+  <img src="redditExampleRequestejsFile.png" alt="" />
+  <h2>Conditionals in EJS</h2>
+  <p>We can also have JS code run depending on what we want.</p>
+  <p>
+    Here is an example with an if else conditional. We use <% %> instead of
+      <%= %> here, since we are not embedding a value, but running literal JS
+        syntax code.
+  </p>
+  <img src="conditionalsEJS.png" alt="" />
+  <p>
+    So only the code inside our curly brackets would run/render if the
+    conditional is true!
+  </p>
+  <p>
+    These tags help us control the flow of our syntax, instead of referencing
+    a computed value and always running the code.
+  </p>
+  <p>
+    We can make a sketch at the end of our file and move it to the body when
+    we have all our ejs and HTML tags in order.
+  </p>
+  <hr />
+  <p>Here is another way to do the same thing:</p>
+  <p>
+    Here we use <%= %> instead of using JS Syntax, so the value is embedded.
+  </p>
+  <img src="alternateInlineConditionalCode.png" alt="" />
+  <h2>Loops in EJS</h2>
+  <p>
+    We can also loop any data from our database to display it accordingly in
+    our EJS files.
+  </p>
+  <p>
+    Here is an example where we define the array directly in our JavaScript
+    file, but it could also be coming from a database:
+  </p>
+  <img src="loopsEJSCode.png" alt="" />
+  <p>
+    This webpage will show an unordered list with each name from our names
+    array in a list item!
+  </p>
+  <p>(We used <%= %> because we are using an embedded value)</p>
+  <img src="loopsEJSFile.png" alt="" />
+</body>
+
+</html>
