@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changing Styles</title>
+</head>
+
+<body>
+  <h1>Changing Styles</h1>
+  <p>We can access the CSS styles we've applied to any of our elements.</p>
+  <p>
+    IN ORDER TO ACCESS A SPECIFIC STYLE, WE MUST USE CAMEL-CASE INSTEAD OF THE
+    REGULAR STYLE NAMES SEPARATED BY A DASH.
+  </p>
+  <p>text-decoration = textDecoration</p>
+  <p>background-color = backgroundColor</p>
+  <p>etc.</p>
+  <p>
+    The style collection we are returned will not show us its value if linked
+    from an external CSS document.
+  </p>
+  <p>It only shows inline CSS Styles.</p>
+  <p>
+    We can still make changes to the styles from the DOM, we simply can't see
+    them from here.
+  </p>
+  <p>We always use strings to enter our desired values.</p>
+  <img src="iterationStyleChangesCode.png" alt="" />
+  <p>RESULTS IN --></p>
+  <img src="iterationStyleChangesConsole.png" alt="" />
+  <p>
+    Here we modified the text color of every list item and also of every h2
+    header with a for loop!
+  </p>
+  <hr />
+  <p>
+    Since we can't access the style values unless we declare them with inline
+    CSS, there is an alternative.
+  </p>
+  <p>
+    After we've saved the collection or single element,(with id,tag name or
+    class), we can use window.getComputedStyle("").style.
+  </p>
+  <p>
+    This problem starts because we sometimes have multiple CSS documents for a
+    same webpage, and there are many CSS rules and hierarchies that change
+    what the style actually applied ends up being.
+  </p>
+  <p>
+    WIth this command, we can get the last style that is applied once all the
+    math has been done.
+  </p>
+  <h2>Another example.</h2>
+  <p>We have a div, with a h2 header and a img inside it.</p>
+  <img src="originalDaftPunkPic.png" alt="" />
+  <p>After some changes:</p>
+  <img src="daftPunkConsoleCode.png" alt="" />
+  <p>RESULTS IN --></p>
+  <img src="modifiedDaftPunkPic.png" alt="" />
+  <h2>Rainbow with JS Matching arrays.</h2>
+  <img src="rainbowOriginal.png" alt="" />
+  <p></p>
+  <img src="rainbowHTML.png" alt="" />
+  <p></p>
+  <img src="rainbowJS.png" alt="" />
+  <p></p>
+  <img src="rainbowResult.png" alt="" />
+  <p></p>
+</body>
+
+</html>
