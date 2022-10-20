@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Express Path Parameters</title>
+</head>
+
+<body>
+  <h1>Express Path Parameters</h1>
+  <p>
+    We already know about direct match routing, but sometimes we are looking
+    for patterns for our routes.
+  </p>
+  <p>We can define a generic pattern to prevent making hundreds of routes.</p>
+  <p>
+    The parameters we include will not be hardcoded, they will not need to be
+    matched in exact word form, but are instead a pattern or path.
+  </p>
+  <p>We just check for the pattern, the parameters are variables.</p>
+  <img src="expressPathParameters.png" alt="" />
+  <p>
+    We can destructure the request object to extract the user's search and use
+    it as we like, for this we use request.params. We can save it in a
+    variable, even if we have multiple parameters.
+  </p>
+  <img src="usingRequestParameterDestructured.png" alt="" />
+  <p>Multiple parameters:</p>
+  <img src="multipleParametersDestructured.png" alt="" />
+  <p>This creates specific webpages depending on the user's request.</p>
+  <h2>Query Strings</h2>
+  <p>
+    The request object has a property called query, made with the query string
+    pairs. (key and value)
+  </p>
+  <p>
+    We can enter these pairs manually in the URL, or with the parameter option
+    on an API tool.
+  </p>
+  <p>
+    Upon returning the request object, we will now see the pairs in the
+    object. (EMPTY OBJECT IF NO QUERIES)
+  </p>
+  <p>
+    If we were to console log the request.query we would see it/them as key
+    value pairs.
+  </p>
+  <p>
+    We can also extract this object pair and use it on the user's webpage:
+  </p>
+  <img src="queryStringsExpress.png" alt="" />
+  <h2>Restarting our server</h2>
+  <p>
+    Instead of restarting our server each time we make a change, we can do
+    this automatically with Nodemon.
+  </p>
+  <p>
+    It is a package we can install globally to use in the command line. It
+    will watch for changes and restart our server when changes are detected.
+  </p>
+  <p>
+    It can also be installed locally on each project, however, we will not
+    have access to the nodemon command.
+  </p>
+  <p>nodemon -v gives us the version.</p>
+  <p>
+    Instead of running our index or other files with: node index.js, we will
+    run nodemon index.js.
+  </p>
+  <p>
+    We will automatically receive a command line message saying that the
+    server was restarted upon saving any changes in our server file!
+  </p>
+  <p>NO NEED FOR Ctrl c + node index.js ANYMORE!!!</p>
+</body>
+
+</html>
